@@ -1,41 +1,60 @@
-# Alpha Theme
+# Alpha
 
-![Alpha Theme Banner](./assets/screenshot-1.jpeg)
+[![Version](https://img.shields.io/visual-studio-marketplace/v/gokhangunduz.alpha?label=version)](https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/gokhangunduz.alpha)](https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha)
+[![Rating](https://img.shields.io/visual-studio-marketplace/r/gokhangunduz.alpha)](https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha)
+[![License](https://img.shields.io/github/license/gokhangunduz/alpha)](./LICENSE)
 
-Alpha Theme is a modern and minimalist Visual Studio Code (VSC) theme. It offers a carefully selected color palette and an easy-on-the-eyes design to enhance your coding experience. It provides a perfect look in dark mode.
+A VS Code theme in two variants — **alpha dark** and **alpha light** — that pair the **GitHub Default** interface with a perceptually balanced syntax palette.
+
+The interface (chrome, sidebar, editor surfaces, terminal) is matched byte-for-byte to GitHub's official themes at v6.3.5: GitHub Dark Default for the dark variant, GitHub Light Default for the light variant.
+
+The syntax palette uses the same seven hues in both variants, but the lightness is tuned per background so every token reads with equal weight:
+
+- **Dark variant:** all seven hues at HSL(`h`, 100%, 68%) — strict isoluminance.
+- **Light variant:** each hue tuned to ≥4.5:1 contrast on white (WCAG-AA), saturation kept at 100%. Equal *perceived* weight across colors.
+
+![Alpha](./assets/screenshot-1.jpeg)
+
+## Install
+
+**From VS Code:**
+
+1. Open the Extensions panel (`⌘+Shift+X` / `Ctrl+Shift+X`).
+2. Search for `Alpha`.
+3. Click **Install**.
+4. Run **Preferences: Color Theme** and pick **alpha dark** or **alpha light**.
+
+**From the command line:**
+
+```bash
+code --install-extension gokhangunduz.alpha
+```
+
+Or grab it directly from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha).
+
+## Syntax palette
+
+| Hue  | Used for           | Dark (L=68) | Light (per-hue L) |
+| ---- | ------------------ | ----------- | ----------------- |
+| 0°   | variables, tags    | `#ff5c5c`   | `#ed0000`         |
+| 20°  | constants, numbers | `#ff925c`   | `#d14600`         |
+| 49°  | classes, types     | `#ffe15c`   | `#8c7300`         |
+| 143° | strings            | `#5cff9a`   | `#008734`         |
+| 186° | functions          | `#5cefff`   | `#008391`         |
+| 221° | operators          | `#5c8fff`   | `#266bff`         |
+| 284° | keywords           | `#d35cff`   | `#bd08ff`         |
 
 ## Screenshots
 
-![Alpha Theme](./assets/screenshot-1.jpeg)
-_Alpha Theme Screenshot 1_
+![Alpha](./assets/screenshot-2.jpeg)
 
-![Alpha Theme](./assets/screenshot-2.jpeg)
-_Alpha Theme Screenshot 2_
+![Alpha](./assets/screenshot-3.jpeg)
 
-![Alpha Theme](./assets/screenshot-3.jpeg)
-_Alpha Theme Screenshot 3_
+## Contributing
 
-## Installation
-
-To install Alpha Theme, follow these steps:
-
-1. Open Visual Studio Code.
-2. Click on the Extensions icon in the sidebar.
-3. Type "Alpha Theme" in the search bar and select the theme from the results list.
-4. Click the "Install" button.
-5. Run the command "Preferences: Color Theme" from your launch commands and select Alpha Theme.
-
-## Features
-
-- Simple and elegant design
-- Carefully selected color palette
-- Perfect look in both light and dark modes
-- Easy-on-the-eyes color scheme
-
-## Contribution
-
-If you wish to contribute to this theme by improving it or fixing any issues, please feel free to contribute to the GitHub repository. You can report bugs through the "Issues" section or submit your contributions through "Pull Requests."
+Bug reports and pull requests are welcome on the [issue tracker](https://github.com/gokhangunduz/alpha/issues).
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE). For more information, check the license file.
+[MIT](./LICENSE)
