@@ -41,7 +41,7 @@
   "contributes": {
     "themes": [
       {
-        "label": "alpha",
+        "label": "alpha dark",
         "uiTheme": "vs-dark",
         "path": "./themes/alpha-color-theme.json"
       },
