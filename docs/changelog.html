@@ -11,36 +11,42 @@ GitHub
 <p>All notable changes to the Alpha theme are documented in this file.</p>
 <p>The format is based on <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>,
 and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
-<h2>[0.1.0] - 2026-06-03</h2>
+<h2><a href="https://github.com/gokhangunduz/alpha/compare/v0.1.0...HEAD">Unreleased</a></h2>
+<h2><a href="https://github.com/gokhangunduz/alpha/releases/tag/v0.1.0">0.1.0</a> - 2026-06-03</h2>
 <h3>Added</h3>
 <ul>
-<li>New <strong>alpha light</strong> variant — UI matches GitHub Light Default v6.3.5 byte-for-byte. Syntax palette uses the same seven hues as the dark variant, retuned per-hue (saturation 100%, lightness lowered) so every token meets WCAG-AA contrast (≥4.5:1) on white while preserving equal perceived weight across colors.</li>
+<li><code>alpha light</code> variant. The interface matches GitHub Light Default v6.3.5 byte-for-byte.</li>
+<li><code>galleryBanner</code>, <code>homepage</code>, and <code>bugs</code> fields in <code>package.json</code> for richer Marketplace presentation.</li>
+<li>Expanded <code>keywords</code> list to improve Marketplace discoverability.</li>
 </ul>
 <h3>Changed</h3>
 <ul>
-<li>Dark variant renamed from <code>alpha</code> to <strong>alpha dark</strong> in the theme picker.</li>
-<li>UI colors of the dark variant now match GitHub Dark Default v6.3.5 byte-for-byte (editor, sidebar, status bar, terminal ANSI, git decorations, tabs, panels, debug, peek view, etc.).</li>
-<li>README rewritten with palette table, install instructions, and marketplace badges.</li>
-<li><code>package.json</code> metadata expanded: <code>keywords</code>, <code>galleryBanner</code>, <code>homepage</code>, <code>bugs</code>; <code>engines.vscode</code> lowered to <code>^1.74.0</code> for broader compatibility.</li>
+<li><strong>Dark variant interface now matches GitHub Dark Default v6.3.5 byte-for-byte.</strong> Editor, sidebar, status bar, tabs, panels, terminal ANSI, git decorations, debug, and peek view colors are all updated.</li>
+<li>Dark variant renamed from <code>alpha</code> to <code>alpha dark</code> in the theme picker.</li>
+<li>Light variant syntax palette retuned per hue (saturation kept at 100%, lightness lowered) so every color clears WCAG-AA contrast (≥ 4.5:1) on white.</li>
+<li>Dark variant syntax palette is preserved exactly. The isoluminant HSL(<em>h</em>, 100%, 68%) palette is untouched.</li>
+<li><code>package.json</code> <code>description</code> rewritten to highlight the theme&#39;s distinctive features.</li>
+<li><code>engines.vscode</code> minimum lowered from <code>^1.80.0</code> to <code>^1.74.0</code> for broader VS Code compatibility.</li>
+<li>README rewritten with a palette table, two-variant install instructions, and Marketplace badges.</li>
 </ul>
-<h3>Unchanged</h3>
+<h3>Fixed</h3>
 <ul>
-<li>Syntax (token) colors and semantic token colors are preserved exactly — the isoluminant HSL(*, 100%, 68%) palette is untouched and applied to both variants.</li>
+<li>Repository URL in <code>package.json</code> after the upstream repo was renamed from <code>alpha-theme</code> to <code>alpha</code>.</li>
 </ul>
 <h2>[0.0.4] - 2023-07-22</h2>
 <h3>Added</h3>
 <ul>
-<li>Theme screenshots.</li>
+<li>Theme screenshots in the README.</li>
 </ul>
 <h3>Changed</h3>
 <ul>
-<li>Updated README.</li>
+<li>README polish.</li>
 </ul>
 <h2>[0.0.3] - 2023-07-21</h2>
 <h3>Changed</h3>
 <ul>
-<li>Updated README.</li>
-<li>Updated folder structure.</li>
+<li>Folder layout reorganized.</li>
+<li>README content updated.</li>
 </ul>
 <h2>[0.0.2] - 2023-07-21</h2>
 <h3>Added</h3>
@@ -52,4 +58,5 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <ul>
 <li>Initial release.</li>
 </ul>
+<!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
 </article> </section>  </main> <footer class="border-t border-border/60 max-w-site mx-auto px-6 py-8 mt-12"> <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between"> <p class="text-[13px] text-dim">&copy; 2026 G&ouml;khan G&uuml;nd&uuml;z &middot; MIT License</p> <div class="flex flex-wrap gap-x-5 gap-y-2"> <a href="/alpha/about" class="text-[13px] text-dim hover:text-muted no-underline transition-colors">About</a> <a href="/alpha/changelog" class="text-[13px] text-dim hover:text-muted no-underline transition-colors">Changelog</a> <a href="/alpha/contact" class="text-[13px] text-dim hover:text-muted no-underline transition-colors">Contact</a> <a href="https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha" target="_blank" rel="noopener" class="text-[13px] text-dim hover:text-muted no-underline transition-colors">Marketplace</a> <a href="https://github.com/gokhangunduz/alpha" target="_blank" rel="noopener" class="text-[13px] text-dim hover:text-muted no-underline transition-colors">GitHub</a> </div> </div> </footer> </body></html> 
