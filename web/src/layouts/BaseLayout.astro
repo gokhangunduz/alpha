@@ -4,75 +4,117 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description: string;
-  path?: string;
-  activeNav?: 'about' | 'changelog' | 'contact';
+  canonical: string;
+  activeNav?: 'about' | 'changelog' | 'faq' | 'privacy' | 'terms' | 'contact';
+  schema?: Record<string, unknown>;
+  ogImage?: string;
 }
 
-const { title, description, path = '/', activeNav } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const canonical = `https://gokhangunduz.github.io${base}${path === '/' ? '' : path}`;
-const ogImage = `${base}/og.png`;
+const url = (p: string) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
+
+const SITE_URL = 'https://gokhangunduz.github.io/alpha';
+const OG_DEFAULT = `${SITE_URL}/app-icon.png`;
+
+const { title, description, canonical, activeNav, schema, ogImage = OG_DEFAULT } = Astro.props;
 
 const navItems = [
-  { href: `${base}/about`,     label: 'About',     key: 'about'     },
-  { href: `${base}/changelog`, label: 'Changelog', key: 'changelog' },
-  { href: `${base}/contact`,   label: 'Contact',   key: 'contact'   },
+  { href: url('/about'),     label: 'About',     key: 'about'     },
+  { href: url('/changelog'), label: 'Changelog', key: 'changelog' },
+  { href: url('/faq'),       label: 'FAQ',       key: 'faq'       },
+  { href: url('/contact'),   label: 'Contact',   key: 'contact'   },
 ] as const;
-
-const MARKETPLACE_URL = 'https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha';
-const GITHUB_URL = 'https://github.com/gokhangunduz/alpha';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
-  <meta name="description" content={description} />
-  <link rel="canonical" href={canonical} />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="alpha" />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:url" content={canonical} />
-  <meta property="og:image" content={ogImage} />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <link rel="icon" type="image/png" href={`${base}/favicon.png`} />
-  <meta name="theme-color" content="#0d1117" />
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="alpha">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:image" content={ogImage}>
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={title}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImage}>
+  <link rel="icon" type="image/png" href={url('/app-icon.png')}>
+  <link rel="apple-touch-icon" href={url('/app-icon.png')}>
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
 </head>
-<body class="bg-bg text-fg leading-relaxed">
+<body class="bg-background text-text-primary leading-relaxed">
   <a
     href="#main"
-    class="absolute -top-full left-4 z-[999] px-4 py-2 bg-accent text-white rounded text-sm font-semibold no-underline focus:top-4"
+    class="absolute top-[-100%] left-4 z-[999] px-4 py-2 bg-accent-orange text-white rounded text-sm font-semibold no-underline focus:top-4"
   >
     Skip to content
   </a>
 
-  <nav class="sticky top-0 z-[100] border-b border-border/60 bg-bg/80 backdrop-blur-xl" style="backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);">
-    <div class="mx-auto flex max-w-site items-center justify-between px-6 py-3.5">
-      <a href={`${base}/`} class="flex items-center gap-2.5 text-[15px] font-semibold text-fg no-underline">
-        <img src={`${base}/favicon.png`} alt="" width="26" height="26" class="rounded-md" />
+  <nav class="sticky top-0 z-[100] border-b border-white/[0.06] bg-background/[0.82] backdrop-blur-xl" style="backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);">
+    <div class="mx-auto flex max-w-site items-center justify-between px-6 py-[14px]">
+      <a href={url('/')} class="flex items-center gap-2.5 text-[15px] font-semibold text-text-primary no-underline shrink-0">
+        <img src={url('/app-icon.png')} alt="alpha" width="28" height="28" class="rounded-[6px]">
         alpha
       </a>
 
-      <div class="flex items-center gap-6">
+      <!-- Desktop nav -->
+      <div class="hidden md:flex gap-6 items-center">
         {navItems.map(({ href, label, key }) => (
           <a
             href={href}
-            class={`text-[13px] no-underline transition-colors duration-200 ${activeNav === key ? 'text-fg' : 'text-muted hover:text-fg'}`}
+            class={`text-[13px] no-underline transition-colors duration-200 ${activeNav === key ? 'text-text-primary' : 'text-text-secondary hover:text-text-primary'}`}
           >
             {label}
           </a>
         ))}
         <a
-          href={GITHUB_URL}
+          href="https://github.com/gokhangunduz/alpha"
           target="_blank"
           rel="noopener"
-          class="text-[13px] text-muted hover:text-fg no-underline transition-colors"
-          aria-label="GitHub repository"
+          class="text-[13px] no-underline text-text-secondary hover:text-text-primary transition-colors"
+        >
+          GitHub
+        </a>
+      </div>
+
+      <!-- Hamburger button -->
+      <button
+        id="menu-btn"
+        class="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8 p-1 rounded-md text-text-secondary hover:text-text-primary transition-colors"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <span class="block w-full h-[1.5px] bg-current rounded transition-transform origin-center" id="bar1"></span>
+        <span class="block w-full h-[1.5px] bg-current rounded transition-opacity" id="bar2"></span>
+        <span class="block w-full h-[1.5px] bg-current rounded transition-transform origin-center" id="bar3"></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/[0.06] bg-background/[0.96]">
+      <div class="max-w-site mx-auto px-6 py-4 flex flex-col gap-1">
+        {navItems.map(({ href, label, key }) => (
+          <a
+            href={href}
+            class={`text-[15px] py-2.5 no-underline transition-colors duration-200 ${activeNav === key ? 'text-text-primary font-semibold' : 'text-text-secondary hover:text-text-primary'}`}
+          >
+            {label}
+          </a>
+        ))}
+        <a
+          href="https://github.com/gokhangunduz/alpha"
+          target="_blank"
+          rel="noopener"
+          class="text-[15px] py-2.5 no-underline text-text-secondary hover:text-text-primary transition-colors"
         >
           GitHub
         </a>
@@ -84,17 +126,46 @@ const GITHUB_URL = 'https://github.com/gokhangunduz/alpha';
     <slot />
   </main>
 
-  <footer class="border-t border-border/60 max-w-site mx-auto px-6 py-8 mt-12">
-    <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-      <p class="text-[13px] text-dim">&copy; 2026 G&ouml;khan G&uuml;nd&uuml;z &middot; MIT License</p>
-      <div class="flex flex-wrap gap-x-5 gap-y-2">
-        <a href={`${base}/about`}     class="text-[13px] text-dim hover:text-muted no-underline transition-colors">About</a>
-        <a href={`${base}/changelog`} class="text-[13px] text-dim hover:text-muted no-underline transition-colors">Changelog</a>
-        <a href={`${base}/contact`}   class="text-[13px] text-dim hover:text-muted no-underline transition-colors">Contact</a>
-        <a href={MARKETPLACE_URL} target="_blank" rel="noopener" class="text-[13px] text-dim hover:text-muted no-underline transition-colors">Marketplace</a>
-        <a href={GITHUB_URL} target="_blank" rel="noopener" class="text-[13px] text-dim hover:text-muted no-underline transition-colors">GitHub</a>
+  <footer class="border-t border-white/[0.06] max-w-site mx-auto px-6 py-8">
+    <div class="flex flex-col items-center md:flex-row md:items-center md:justify-between mb-5 gap-3">
+      <p class="text-[13px] text-text-muted text-center md:text-left">&copy; 2026 Gökhan Gündüz · MIT License</p>
+      <div class="flex flex-wrap justify-center md:justify-end gap-x-5 gap-y-2">
+        <a href={url('/about')}     class="text-[13px] text-text-muted no-underline transition-colors hover:text-text-tertiary">About</a>
+        <a href={url('/changelog')} class="text-[13px] text-text-muted no-underline transition-colors hover:text-text-tertiary">Changelog</a>
+        <a href={url('/faq')}       class="text-[13px] text-text-muted no-underline transition-colors hover:text-text-tertiary">FAQ</a>
+        <a href={url('/privacy')}   class="text-[13px] text-text-muted no-underline transition-colors hover:text-text-tertiary">Privacy</a>
+        <a href={url('/terms')}     class="text-[13px] text-text-muted no-underline transition-colors hover:text-text-tertiary">License</a>
+        <a href={url('/contact')}   class="text-[13px] text-text-muted no-underline transition-colors hover:text-text-tertiary">Contact</a>
+        <a href="https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha" target="_blank" rel="noopener" class="text-[13px] text-text-muted no-underline transition-colors hover:text-text-tertiary">Marketplace</a>
+        <a href="https://github.com/gokhangunduz/alpha" target="_blank" rel="noopener" class="text-[13px] text-text-muted no-underline transition-colors hover:text-text-tertiary">GitHub</a>
       </div>
     </div>
+    <div class="text-center text-[12px] text-text-dim pt-4 border-t border-white/[0.04]">
+      Made with <span class="text-accent-pink">&hearts;</span> in Ankara
+    </div>
   </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const bar1 = document.getElementById('bar1');
+    const bar2 = document.getElementById('bar2');
+    const bar3 = document.getElementById('bar3');
+
+    btn?.addEventListener('click', () => {
+      const isOpen = !menu?.classList.contains('hidden');
+      menu?.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      if (!isOpen) {
+        bar1?.classList.add('translate-y-[6.5px]', 'rotate-45');
+        bar2?.classList.add('opacity-0');
+        bar3?.classList.add('-translate-y-[6.5px]', '-rotate-45');
+      } else {
+        bar1?.classList.remove('translate-y-[6.5px]', 'rotate-45');
+        bar2?.classList.remove('opacity-0');
+        bar3?.classList.remove('-translate-y-[6.5px]', '-rotate-45');
+      }
+    });
+  </script>
 </body>
 </html>
