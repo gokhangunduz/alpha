@@ -1,0 +1,75 @@
+---
+import ContentLayout from '../layouts/ContentLayout.astro';
+
+const SITE = 'https://gokhangunduz.github.io/alpha';
+
+const faqs = [
+  {
+    q: 'What is alpha?',
+    a: 'alpha is a Visual Studio Code color theme. It pairs the official GitHub UI (matched byte-for-byte at v6.3.5) with a custom syntax palette of seven hues tuned for equal perceived weight. It ships as two variants: alpha dark and alpha light.',
+  },
+  {
+    q: 'How is alpha different from the GitHub themes?',
+    a: "alpha uses GitHub's interface verbatim but replaces the syntax colors. Where GitHub's themes use a wider palette tuned to follow common syntax-highlighting conventions, alpha uses exactly seven hues, each carrying equal visual weight, so structure reads more clearly than emphasis.",
+  },
+  {
+    q: 'What does "isoluminant" mean here?',
+    a: 'In the dark variant, every syntax color is locked at HSL(h, 100%, 68%). Hue rotates, but lightness and saturation are constant. The result: no token visually outweighs another. Your eye scans by shape and position rather than brightness.',
+  },
+  {
+    q: 'Why is the light variant tuned differently?',
+    a: 'On a white background, identical lightness would make some hues (like yellow and cyan) wash out and fail accessibility contrast. The light variant keeps saturation at 100% but lowers lightness per hue until every color clears ≥ 4.5:1 contrast (WCAG-AA) on white. Perceived weight stays equal across the seven colors.',
+  },
+  {
+    q: 'How do I install alpha?',
+    a: 'Open the Extensions panel in VS Code (⌘+Shift+X / Ctrl+Shift+X), search for "Alpha", click Install, then run "Preferences: Color Theme" and pick alpha dark or alpha light. You can also install from the command line: code --install-extension gokhangunduz.alpha',
+  },
+  {
+    q: 'What VS Code version do I need?',
+    a: 'alpha supports VS Code 1.74 and later.',
+  },
+  {
+    q: 'Does alpha follow my system dark/light setting?',
+    a: 'Yes, if you configure VS Code to auto-switch. In Settings → Preferred Color Theme, set "alpha dark" for the dark scheme and "alpha light" for the light scheme, then enable "Window: Auto Detect Color Scheme".',
+  },
+  {
+    q: 'Is alpha free?',
+    a: 'Yes. alpha is free and open source under the MIT License. There are no paid tiers, telemetry, or accounts.',
+  },
+  {
+    q: 'Can I suggest a color change or a new feature?',
+    a: 'Yes — open an issue on GitHub. The repo has templates for bug reports and feature requests. Suggestions that fit the design rules (seven hues, isoluminance in dark, WCAG-AA in light) are easiest to land, but well-argued exceptions get serious thought too.',
+  },
+  {
+    q: 'Where can I see the source?',
+    a: 'The theme, build, and website all live in one repository: github.com/gokhangunduz/alpha',
+  },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+};
+---
+
+<ContentLayout
+  title="FAQ — alpha"
+  description="Frequently asked questions about alpha, the VS Code theme with a GitHub UI and an isoluminant syntax palette."
+  canonical={`${SITE}/faq`}
+  activeNav="faq"
+  heading="FAQ"
+  subtitle="Answers to the most common questions about alpha."
+  schema={schema}
+>
+  {faqs.map(({ q, a }) => (
+    <>
+      <h2>{q}</h2>
+      <p>{a}</p>
+    </>
+  ))}
+</ContentLayout>
