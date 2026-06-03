@@ -2,49 +2,36 @@
 import ContentLayout from '../layouts/ContentLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const ISSUES_BUG = 'https://github.com/gokhangunduz/alpha/issues/new?template=bug_report.yml';
-const ISSUES_FEATURE = 'https://github.com/gokhangunduz/alpha/issues/new?template=feature_request.yml';
-const MARKETPLACE_URL = 'https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha';
+const ISSUES_NEW = 'https://github.com/gokhangunduz/alpha/issues/new/choose';
 ---
 
 <ContentLayout
   title="Contact — alpha"
-  description="How to report bugs, suggest features, and reach the developer."
+  description="Get in touch with the alpha developer."
   path="/contact"
   activeNav="contact"
   heading="Contact"
-  subtitle="Found a bug, have a color suggestion, or just want to say hi? Pick the channel that fits."
+  subtitle="Have a question, feedback, or feature request? I'd love to hear from you."
 >
-  <div class="contact-grid grid gap-4 my-8">
-    <a href={ISSUES_BUG} target="_blank" rel="noopener" class="block bg-surface border border-border/60 rounded-2xl px-6 py-7 no-underline transition-all hover:border-muted/60 hover:-translate-y-0.5">
-      <h3 class="text-[15px] font-semibold text-fg mb-1">Report a bug</h3>
-      <p class="text-[13px] !text-muted !mb-0">GitHub issue &middot; bug template</p>
-    </a>
-    <a href={ISSUES_FEATURE} target="_blank" rel="noopener" class="block bg-surface border border-border/60 rounded-2xl px-6 py-7 no-underline transition-all hover:border-muted/60 hover:-translate-y-0.5">
-      <h3 class="text-[15px] font-semibold text-fg mb-1">Suggest a feature</h3>
-      <p class="text-[13px] !text-muted !mb-0">GitHub issue &middot; feature template</p>
-    </a>
+  <div class="contact-grid grid gap-4 my-8 [&_p]:!mb-0">
     <a href="mailto:me@gokhangunduz.dev" class="block bg-surface border border-border/60 rounded-2xl px-6 py-7 no-underline transition-all hover:border-muted/60 hover:-translate-y-0.5">
       <h3 class="text-[15px] font-semibold text-fg mb-1">Email</h3>
-      <p class="text-[13px] !text-muted !mb-0">me@gokhangunduz.dev</p>
+      <p class="text-[14px] !text-muted">me@gokhangunduz.dev</p>
     </a>
     <a href="https://gokhangunduz.dev" target="_blank" rel="noopener" class="block bg-surface border border-border/60 rounded-2xl px-6 py-7 no-underline transition-all hover:border-muted/60 hover:-translate-y-0.5">
       <h3 class="text-[15px] font-semibold text-fg mb-1">Website</h3>
-      <p class="text-[13px] !text-muted !mb-0">gokhangunduz.dev</p>
+      <p class="text-[14px] !text-muted">gokhangunduz.dev</p>
     </a>
   </div>
 
-  <h2>Bug reports</h2>
-  <p>For UI mismatches, color quirks, or anything that looks off, use the <strong>bug report</strong> template on GitHub. Including your VS Code version, the alpha version, and a screenshot covers most of what's needed to reproduce.</p>
+  <h2>Support</h2>
+  <p>If you've found a bug, please <a href={ISSUES_NEW} target="_blank" rel="noopener">open an issue on GitHub</a> with your VS Code version, the alpha version, and a screenshot if relevant.</p>
 
-  <h2>Feature &amp; color requests</h2>
-  <p>Have an idea for a tweak, a new variant, or a hue that would fit the palette better? Open a feature request. Color suggestions are welcome — send the hex value and a short note on why it would slot in.</p>
-
-  <h2>Marketplace reviews</h2>
-  <p>If alpha is working well for you, a quick rating on the <a href={MARKETPLACE_URL} target="_blank" rel="noopener">VS Code Marketplace</a> helps others find it.</p>
+  <h2>Feature requests</h2>
+  <p>Got an idea or a color suggestion? <a href={ISSUES_NEW} target="_blank" rel="noopener">Open a feature request</a> on GitHub.</p>
 
   <h2>About the developer</h2>
-  <p>Curious who is behind alpha? See the <a href={`${base}/about`}>About page</a>.</p>
+  <p>Want to know more about the developer behind alpha? Visit the <a href={`${base}/about`}>About page</a>.</p>
 </ContentLayout>
 
 <style>
