@@ -1,0 +1,42 @@
+name: Bug report
+description: Report a problem with the theme
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: A clear and concise description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to see?
+    validations:
+      required: true
+  - type: input
+    id: vscode
+    attributes:
+      label: VS Code version
+      placeholder: "1.95.0"
+    validations:
+      required: true
+  - type: input
+    id: theme-version
+    attributes:
+      label: Alpha version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: language
+    attributes:
+      label: Affected language(s)
+      placeholder: "TypeScript, Python, ..."
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag and drop a screenshot if relevant.
