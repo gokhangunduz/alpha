@@ -2,129 +2,162 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const url = (p: string) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
+
+const SITE = 'https://gokhangunduz.github.io/alpha';
 const MARKETPLACE_URL = 'https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha';
 const GITHUB_URL = 'https://github.com/gokhangunduz/alpha';
 
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'alpha',
+  applicationCategory: 'DeveloperApplication',
+  operatingSystem: 'VS Code',
+  description: "A VS Code theme pairing GitHub's UI byte-for-byte with a perceptually balanced isoluminant syntax palette. Dark and light variants.",
+  url: SITE,
+  image: `${SITE}/app-icon.png`,
+  author: {
+    '@type': 'Person',
+    name: 'Gökhan Gündüz',
+    url: 'https://gokhangunduz.dev',
+  },
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+  },
+  installUrl: MARKETPLACE_URL,
+};
+
 const palette = [
-  { hue: 0,   used: 'variables, tags',    dark: '#ff5c5c', light: '#ed0000' },
-  { hue: 20,  used: 'constants, numbers', dark: '#ff925c', light: '#d14600' },
-  { hue: 49,  used: 'classes, types',     dark: '#ffe15c', light: '#8c7300' },
-  { hue: 143, used: 'strings',            dark: '#5cff9a', light: '#008734' },
-  { hue: 186, used: 'functions',          dark: '#5cefff', light: '#008391' },
-  { hue: 221, used: 'operators',          dark: '#5c8fff', light: '#266bff' },
-  { hue: 284, used: 'keywords',           dark: '#d35cff', light: '#bd08ff' },
+  { hue: '0°',   used: 'variables, tags',    dark: '#ff5c5c', light: '#ed0000' },
+  { hue: '20°',  used: 'constants, numbers', dark: '#ff925c', light: '#d14600' },
+  { hue: '49°',  used: 'classes, types',     dark: '#ffe15c', light: '#8c7300' },
+  { hue: '143°', used: 'strings',            dark: '#5cff9a', light: '#008734' },
+  { hue: '186°', used: 'functions',          dark: '#5cefff', light: '#008391' },
+  { hue: '221°', used: 'operators',          dark: '#5c8fff', light: '#266bff' },
+  { hue: '284°', used: 'keywords',           dark: '#d35cff', light: '#bd08ff' },
 ];
 
-const screenshots = [
-  { src: `${base}/screenshots/screenshot-1.png`, alt: 'Alpha dark — JavaScript editor view' },
-  { src: `${base}/screenshots/screenshot-2.png`, alt: 'Alpha dark — command palette open' },
-  { src: `${base}/screenshots/screenshot-3.png`, alt: 'Alpha dark — quick open' },
+const features = [
+  { icon: '🎨', title: 'Two variants',          desc: 'alpha dark and alpha light. UI matches GitHub Dark Default and GitHub Light Default v6.3.5, byte-for-byte. Switch with the OS, or pin one.' },
+  { icon: '⚖️', title: 'Isoluminant palette',   desc: 'Dark variant locks every syntax color at HSL(h, 100%, 68%). Only the hue rotates, so no token visually outweighs another.' },
+  { icon: '☀️', title: 'WCAG-AA in light',      desc: 'Light variant retunes lightness per hue to clear ≥ 4.5:1 contrast on white. Saturation stays at 100%, weight stays equal.' },
+  { icon: '🧩', title: 'GitHub-native chrome',  desc: 'Editor, sidebar, status bar, tabs, panels, terminal ANSI, git decorations — all sourced from the official GitHub themes.' },
+  { icon: '🆓', title: 'Free & MIT',             desc: 'No paywalls, no telemetry, no account. Open source under the MIT License, hosted on GitHub.' },
+  { icon: '⚡', title: 'Broad VS Code support', desc: 'Runs on VS Code 1.74 and up. Installs in seconds from the Marketplace or via the CLI.' },
 ];
 ---
 
 <BaseLayout
-  title="alpha — VS Code theme"
+  title="alpha — a VS Code theme"
   description="A VS Code theme pairing GitHub's UI byte-for-byte with a perceptually balanced isoluminant syntax palette. Dark and light variants."
-  path="/"
+  canonical={SITE}
+  schema={schema}
 >
   <!-- Hero -->
-  <section class="hero-gradient">
-    <div class="max-w-site mx-auto px-6 pt-24 pb-20 text-center">
-      <img
-        src={`${base}/favicon.png`}
-        alt=""
-        width="96"
-        height="96"
-        class="mx-auto mb-8 rounded-[22px] shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
-      />
-      <h1 class="text-[56px] md:text-[72px] font-bold tracking-[-2.5px] leading-none mb-5">alpha</h1>
-      <p class="text-[19px] md:text-[21px] text-muted max-w-[480px] mx-auto leading-[1.5] mb-10">
-        A VS Code theme. GitHub's UI, a balanced syntax palette.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <a
-          href={MARKETPLACE_URL}
-          target="_blank"
-          rel="noopener"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent hover:bg-accent-h text-white font-semibold text-[15px] no-underline transition-colors"
-        >
-          Install from Marketplace
-        </a>
-        <a
-          href={GITHUB_URL}
-          target="_blank"
-          rel="noopener"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:border-muted text-fg font-semibold text-[15px] no-underline transition-colors"
-        >
-          View on GitHub
-        </a>
-      </div>
+  <section class="hero-gradient min-h-[78vh] flex flex-col items-center justify-center text-center px-6 pt-20 pb-16">
+    <img src={url('/app-icon.png')} alt="alpha icon" class="w-[120px] h-[120px] rounded-[27px] mb-8 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+    <h1 class="text-[56px] font-bold tracking-[-2px] text-text-primary mb-4">alpha</h1>
+    <p class="text-[21px] text-text-secondary max-w-[560px] mx-auto mb-10 leading-[1.5]">
+      A VS Code theme pairing <span class="text-text-primary">GitHub's UI</span> byte-for-byte with a perceptually balanced <span class="text-text-primary">isoluminant</span> syntax palette.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 items-center">
+      <a href={MARKETPLACE_URL} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-[12px] bg-accent-orange hover:bg-accent-orange-h text-white font-semibold text-[15px] no-underline transition-colors">
+        Install from Marketplace
+      </a>
+      <a href={GITHUB_URL} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-[12px] border border-white/[0.12] hover:border-white/[0.24] text-text-primary font-semibold text-[15px] no-underline transition-colors">
+        View on GitHub
+      </a>
     </div>
   </section>
 
-  <!-- Variants -->
+  <!-- Two variants -->
   <section class="max-w-site mx-auto px-6 py-20">
     <div class="text-center mb-12">
-      <h2 class="text-[32px] md:text-[40px] font-bold tracking-[-1px] mb-3">Two variants</h2>
-      <p class="text-[16px] md:text-[18px] text-muted max-w-[500px] mx-auto">Dark and light. Pick one, or follow the OS.</p>
+      <h2 class="text-[40px] font-bold tracking-[-1px] text-text-primary mb-3">Two variants</h2>
+      <p class="text-[18px] text-text-secondary max-w-[520px] mx-auto">
+        Same seven hues. The dark variant locks lightness; the light variant retunes it to keep weight equal on white.
+      </p>
     </div>
-
     <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-      <div class="rounded-2xl border border-border/60 overflow-hidden">
+      <div class="rounded-[20px] border border-white/[0.06] overflow-hidden">
         <div class="bg-[#0d1117] p-6 font-mono text-[13px] leading-[1.7]">
           <div class="text-[#7f848e]">// alpha dark</div>
           <div><span class="text-[#d35cff]">const</span> <span class="text-[#ff925c]">N</span> <span class="text-[#5c8fff]">=</span> <span class="text-[#ff925c]">42</span><span class="text-[#d4d4d4]">;</span></div>
           <div><span class="text-[#d35cff]">function</span> <span class="text-[#5cefff]">hello</span><span class="text-[#d4d4d4]">(</span><span class="text-[#ff5c5c]">name</span><span class="text-[#d4d4d4]">)</span> <span class="text-[#d4d4d4]">{`{`}</span></div>
-          <div>&nbsp;&nbsp;<span class="text-[#d35cff]">return</span> <span class="text-[#5cff9a]">`hi, ${'$'}{`{`}name{`}`}`</span><span class="text-[#d4d4d4]">;</span></div>
+          <div>&nbsp;&nbsp;<span class="text-[#d35cff]">return</span> <span class="text-[#5cff9a]">{'`hi, ${name}`'}</span><span class="text-[#d4d4d4]">;</span></div>
           <div><span class="text-[#d4d4d4]">{`}`}</span></div>
         </div>
-        <div class="px-5 py-3 text-[12px] text-muted border-t border-border/60 bg-surface">
+        <div class="px-5 py-3 text-[12px] text-text-muted border-t border-white/[0.06] bg-card">
           alpha dark · #0d1117 background
         </div>
       </div>
-
-      <div class="rounded-2xl border border-border/60 overflow-hidden">
+      <div class="rounded-[20px] border border-white/[0.06] overflow-hidden">
         <div class="bg-white p-6 font-mono text-[13px] leading-[1.7]">
           <div class="text-[#6e7781]">// alpha light</div>
           <div><span class="text-[#bd08ff]">const</span> <span class="text-[#d14600]">N</span> <span class="text-[#266bff]">=</span> <span class="text-[#d14600]">42</span><span class="text-[#1f2328]">;</span></div>
           <div><span class="text-[#bd08ff]">function</span> <span class="text-[#008391]">hello</span><span class="text-[#1f2328]">(</span><span class="text-[#ed0000]">name</span><span class="text-[#1f2328]">)</span> <span class="text-[#1f2328]">{`{`}</span></div>
-          <div>&nbsp;&nbsp;<span class="text-[#bd08ff]">return</span> <span class="text-[#008734]">`hi, ${'$'}{`{`}name{`}`}`</span><span class="text-[#1f2328]">;</span></div>
+          <div>&nbsp;&nbsp;<span class="text-[#bd08ff]">return</span> <span class="text-[#008734]">{'`hi, ${name}`'}</span><span class="text-[#1f2328]">;</span></div>
           <div><span class="text-[#1f2328]">{`}`}</span></div>
         </div>
-        <div class="px-5 py-3 text-[12px] text-muted border-t border-border/60 bg-surface">
+        <div class="px-5 py-3 text-[12px] text-text-muted border-t border-white/[0.06] bg-card">
           alpha light · #ffffff background, WCAG-AA tuned
         </div>
       </div>
     </div>
   </section>
 
-  <div class="max-w-site mx-auto px-6"><div class="h-px bg-border/60"></div></div>
+  <div class="max-w-site mx-auto px-6"><div class="h-px bg-white/[0.06]"></div></div>
+
+  <!-- Features -->
+  <div class="max-w-site mx-auto px-6">
+    <div class="text-center py-20 pb-14">
+      <h2 class="text-[40px] font-bold tracking-[-1px] text-text-primary mb-3">Designed for legibility</h2>
+      <p class="text-[18px] text-text-secondary max-w-[520px] mx-auto">A handful of design rules, applied consistently across the whole theme.</p>
+    </div>
+    <div class="features-grid grid grid-cols-3 gap-5 pb-20">
+      {features.map(({ icon, title, desc }) => (
+        <div class="bg-card border border-white/[0.06] rounded-[20px] p-8 transition-colors hover:border-white/[0.12]">
+          <div class="text-[32px] mb-4">{icon}</div>
+          <h3 class="text-[17px] font-semibold text-text-primary mb-2">{title}</h3>
+          <p class="text-[14px] text-text-secondary leading-[1.55]">{desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="max-w-site mx-auto px-6"><div class="h-px bg-white/[0.06]"></div></div>
 
   <!-- Palette -->
   <section class="max-w-site mx-auto px-6 py-20">
     <div class="text-center mb-12">
-      <h2 class="text-[32px] md:text-[40px] font-bold tracking-[-1px] mb-3">Palette</h2>
-      <p class="text-[16px] md:text-[18px] text-muted max-w-[500px] mx-auto">Seven hues, equal perceived weight.</p>
+      <h2 class="text-[40px] font-bold tracking-[-1px] text-text-primary mb-3">Seven hues, equal weight</h2>
+      <p class="text-[18px] text-text-secondary max-w-[560px] mx-auto">
+        Dark variant locks every color at <span class="font-mono text-text-primary">HSL(h, 100%, 68%)</span> — only the hue rotates.
+        Light variant retunes lightness per hue to hit WCAG-AA on white.
+      </p>
     </div>
-
-    <div class="rounded-2xl border border-border/60 overflow-hidden">
-      <div class="grid grid-cols-[1fr_auto_auto_auto] md:grid-cols-[auto_1fr_auto_auto] gap-x-4 gap-y-0 text-[13px]">
-        <div class="contents text-[12px] uppercase tracking-wider text-dim">
-          <div class="px-5 py-3 bg-surface border-b border-border/60">Hue</div>
-          <div class="px-5 py-3 bg-surface border-b border-border/60">Used for</div>
-          <div class="px-5 py-3 bg-surface border-b border-border/60">Dark</div>
-          <div class="px-5 py-3 bg-surface border-b border-border/60">Light</div>
+    <div class="rounded-[20px] border border-white/[0.06] overflow-hidden bg-card">
+      <div class="grid grid-cols-[auto_1fr_auto_auto] text-[13px]">
+        <div class="contents text-[12px] uppercase tracking-wider text-text-muted">
+          <div class="px-5 py-3 border-b border-white/[0.06]">Hue</div>
+          <div class="px-5 py-3 border-b border-white/[0.06]">Used for</div>
+          <div class="px-5 py-3 border-b border-white/[0.06]">Dark</div>
+          <div class="px-5 py-3 border-b border-white/[0.06]">Light</div>
         </div>
         {palette.map(({ hue, used, dark, light }) => (
           <div class="contents">
-            <div class="px-5 py-3 border-b border-border/30 font-mono text-muted">{hue}&deg;</div>
-            <div class="px-5 py-3 border-b border-border/30 text-fg">{used}</div>
-            <div class="px-5 py-3 border-b border-border/30 font-mono flex items-center gap-2">
+            <div class="px-5 py-3 border-b border-white/[0.04] font-mono text-text-secondary">{hue}</div>
+            <div class="px-5 py-3 border-b border-white/[0.04] text-text-primary">{used}</div>
+            <div class="px-5 py-3 border-b border-white/[0.04] font-mono flex items-center gap-2">
               <span class="inline-block w-4 h-4 rounded" style={`background:${dark}`}></span>
               <span style={`color:${dark}`}>{dark}</span>
             </div>
-            <div class="px-5 py-3 border-b border-border/30 font-mono flex items-center gap-2">
-              <span class="inline-block w-4 h-4 rounded ring-1 ring-border" style={`background:${light}`}></span>
+            <div class="px-5 py-3 border-b border-white/[0.04] font-mono flex items-center gap-2">
+              <span class="inline-block w-4 h-4 rounded ring-1 ring-white/[0.12]" style={`background:${light}`}></span>
               <span style={`color:${light}`}>{light}</span>
             </div>
           </div>
@@ -133,49 +166,78 @@ const screenshots = [
     </div>
   </section>
 
-  <div class="max-w-site mx-auto px-6"><div class="h-px bg-border/60"></div></div>
+  <div class="max-w-site mx-auto px-6"><div class="h-px bg-white/[0.06]"></div></div>
 
   <!-- Screenshots -->
   <section class="max-w-site mx-auto px-6 py-20">
     <div class="text-center mb-12">
-      <h2 class="text-[32px] md:text-[40px] font-bold tracking-[-1px] mb-3">Screenshots</h2>
+      <h2 class="text-[40px] font-bold tracking-[-1px] text-text-primary mb-3">In your editor</h2>
+      <p class="text-[18px] text-text-secondary max-w-[480px] mx-auto">
+        The same VS Code you know — GitHub's chrome, alpha's palette.
+      </p>
     </div>
-
     <div class="grid grid-cols-1 gap-5">
-      {screenshots.map(({ src, alt }) => (
-        <div class="rounded-2xl overflow-hidden border border-border/60 shadow-[0_16px_48px_rgba(0,0,0,0.4)]">
-          <img src={src} alt={alt} loading="lazy" class="block w-full h-auto" />
+      {[
+        { src: url('/images/screenshots/screenshot-1.jpeg'), alt: 'alpha dark — JavaScript editor view' },
+        { src: url('/images/screenshots/screenshot-2.jpeg'), alt: 'alpha dark — command palette open' },
+        { src: url('/images/screenshots/screenshot-3.jpeg'), alt: 'alpha dark — quick open' },
+      ].map(({ src, alt }) => (
+        <div class="rounded-[20px] overflow-hidden border border-white/[0.06] shadow-[0_16px_48px_rgba(0,0,0,0.4)]">
+          <img src={src} alt={alt} loading="lazy" class="block w-full h-auto">
         </div>
       ))}
     </div>
   </section>
 
-  <div class="max-w-site mx-auto px-6"><div class="h-px bg-border/60"></div></div>
+  <div class="max-w-site mx-auto px-6"><div class="h-px bg-white/[0.06]"></div></div>
 
   <!-- Install -->
   <section class="max-w-site mx-auto px-6 py-20">
-    <div class="text-center mb-10">
-      <h2 class="text-[32px] md:text-[40px] font-bold tracking-[-1px] mb-3">Install</h2>
-      <p class="text-[16px] md:text-[18px] text-muted max-w-[460px] mx-auto">
-        Pick your variant from <span class="font-mono text-fg">Preferences: Color Theme</span>.
+    <div class="text-center mb-12">
+      <h2 class="text-[40px] font-bold tracking-[-1px] text-text-primary mb-3">Install</h2>
+      <p class="text-[18px] text-text-secondary max-w-[460px] mx-auto">
+        Pick your variant from <span class="font-mono text-text-primary">Preferences: Color Theme</span>.
       </p>
     </div>
-
     <div class="max-w-[640px] mx-auto space-y-4">
-      <div class="rounded-xl border border-border/60 bg-surface p-5">
-        <p class="text-[12px] uppercase tracking-wider text-dim mb-2">From VS Code</p>
-        <ol class="text-[14px] text-muted space-y-1 list-decimal list-inside">
-          <li>Open Extensions (<span class="font-mono text-fg">⌘+Shift+X</span>)</li>
-          <li>Search <span class="font-mono text-fg">Alpha</span></li>
+      <div class="rounded-[16px] border border-white/[0.06] bg-card p-6">
+        <p class="text-[12px] uppercase tracking-wider text-text-muted mb-3">From VS Code</p>
+        <ol class="text-[14px] text-text-secondary space-y-1.5 list-decimal list-inside">
+          <li>Open Extensions (<span class="font-mono text-text-primary">⌘+Shift+X</span>)</li>
+          <li>Search <span class="font-mono text-text-primary">Alpha</span></li>
           <li>Install &amp; reload</li>
-          <li>Run <span class="font-mono text-fg">Preferences: Color Theme</span> → pick <span class="text-fg">alpha dark</span> or <span class="text-fg">alpha light</span></li>
+          <li>Run <span class="font-mono text-text-primary">Preferences: Color Theme</span> → pick <span class="text-text-primary">alpha dark</span> or <span class="text-text-primary">alpha light</span></li>
         </ol>
       </div>
-
-      <div class="rounded-xl border border-border/60 bg-surface p-5">
-        <p class="text-[12px] uppercase tracking-wider text-dim mb-2">From the command line</p>
-        <pre class="text-[13px] font-mono text-fg overflow-x-auto"><code>code --install-extension gokhangunduz.alpha</code></pre>
+      <div class="rounded-[16px] border border-white/[0.06] bg-card p-6">
+        <p class="text-[12px] uppercase tracking-wider text-text-muted mb-3">From the command line</p>
+        <pre class="text-[13px] font-mono text-text-primary overflow-x-auto"><code>code --install-extension gokhangunduz.alpha</code></pre>
       </div>
     </div>
   </section>
+
+  <!-- CTA -->
+  <div class="max-w-site mx-auto px-6">
+    <section class="text-center py-16">
+      <h2 class="text-[28px] font-bold text-text-primary mb-5">Ready to try it?</h2>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <a href={MARKETPLACE_URL} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-[12px] bg-accent-orange hover:bg-accent-orange-h text-white font-semibold text-[15px] no-underline transition-colors">
+          Install from Marketplace
+        </a>
+        <a href={GITHUB_URL} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-[12px] border border-white/[0.12] hover:border-white/[0.24] text-text-primary font-semibold text-[15px] no-underline transition-colors">
+          Star on GitHub
+        </a>
+      </div>
+    </section>
+  </div>
 </BaseLayout>
+
+<style>
+  @media (max-width: 1024px) {
+    .features-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    h1 { font-size: 40px; letter-spacing: -1.5px; }
+    .features-grid { grid-template-columns: 1fr; }
+  }
+</style>
