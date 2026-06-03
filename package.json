@@ -44,6 +44,11 @@
         "label": "alpha",
         "uiTheme": "vs-dark",
         "path": "./themes/alpha-color-theme.json"
+      },
+      {
+        "label": "alpha light",
+        "uiTheme": "vs",
+        "path": "./themes/alpha-light-color-theme.json"
       }
     ]
   }
