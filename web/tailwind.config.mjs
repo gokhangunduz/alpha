@@ -15,6 +15,7 @@ export default {
       },
       maxWidth: {
         site: '980px',
+        narrow: '680px',
       },
       fontFamily: {
         sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Text"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
