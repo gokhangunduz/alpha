@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 54" role="img" aria-label="Install on VS Code Marketplace">
+  <rect x="0.5" y="0.5" width="219" height="53" rx="9.5" fill="#000" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <g transform="translate(14 14) scale(1.0833)">
+    <path d="M17.5 2.5l-12 8L2.5 8 1 9l3.5 3L1 15l1.5 1 3-2.5 12 8L23 19V5z" fill="#0098FF"/>
+    <path d="M17.5 7.5L9 12l8.5 4.5z" fill="#0d1117" opacity="0.35"/>
+  </g>
+  <text x="52" y="23" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="9" font-weight="500" letter-spacing="1" fill="rgba(255,255,255,0.85)">INSTALL ON</text>
+  <text x="52" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#fff">VS Code Marketplace</text>
+</svg>

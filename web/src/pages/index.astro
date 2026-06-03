@@ -6,7 +6,6 @@ const url = (p: string) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
 
 const SITE = 'https://gokhangunduz.github.io/alpha';
 const MARKETPLACE_URL = 'https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha';
-const GITHUB_URL = 'https://github.com/gokhangunduz/alpha';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -61,24 +60,11 @@ const features = [
   <section class="hero-gradient min-h-screen flex flex-col items-center justify-center text-center px-6">
     <img src={url('/app-icon.webp')} alt="alpha icon" class="w-[120px] h-[120px] rounded-[27px] mb-8 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
     <h1 class="text-[56px] font-bold tracking-[-2px] text-text-primary mb-4">alpha</h1>
-    <p class="text-[21px] text-text-secondary max-w-[560px] mx-auto mb-10 leading-[1.5]">
+    <p class="text-[21px] text-text-secondary max-w-[520px] mx-auto mb-10 leading-[1.5]">
       A VS Code theme with a <span class="text-text-primary">clean, restrained interface</span> and a perceptually balanced <span class="text-text-primary">isoluminant</span> syntax palette.
     </p>
-    <a
-      href={MARKETPLACE_URL}
-      target="_blank"
-      rel="noopener"
-      aria-label="Install alpha on the VS Code Marketplace"
-      class="inline-flex items-center gap-3 h-[54px] px-5 bg-black hover:bg-[#1a1a1a] text-white rounded-[10px] border border-white/[0.18] no-underline transition-colors"
-    >
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M17.5 2.5l-12 8L2.5 8 1 9l3.5 3L1 15l1.5 1 3-2.5 12 8L23 19V5z" fill="#0098FF"/>
-        <path d="M17.5 7.5L9 12l8.5 4.5z" fill="#0d1117" opacity="0.35"/>
-      </svg>
-      <span class="flex flex-col items-start leading-tight text-left">
-        <span class="text-[10px] uppercase tracking-[0.12em] text-white/85">Install on</span>
-        <span class="text-[17px] font-semibold -mt-0.5">VS Code Marketplace</span>
-      </span>
+    <a href={MARKETPLACE_URL} target="_blank" rel="noopener" class="inline-block transition-opacity hover:opacity-80">
+      <img src={url('/marketplace-badge.svg')} alt="Install on VS Code Marketplace" class="h-[54px]">
     </a>
   </section>
 
@@ -235,14 +221,9 @@ const features = [
   <div class="max-w-site mx-auto px-6">
     <section class="text-center py-16">
       <h2 class="text-[28px] font-bold text-text-primary mb-5">Ready to try it?</h2>
-      <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <a href={MARKETPLACE_URL} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-[12px] bg-accent-orange hover:bg-accent-orange-h text-white font-semibold text-[15px] no-underline transition-colors">
-          Install from Marketplace
-        </a>
-        <a href={GITHUB_URL} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-[12px] border border-white/[0.12] hover:border-white/[0.24] text-text-primary font-semibold text-[15px] no-underline transition-colors">
-          Star on GitHub
-        </a>
-      </div>
+      <a href={MARKETPLACE_URL} target="_blank" rel="noopener" class="inline-block transition-opacity hover:opacity-80">
+        <img src={url('/marketplace-badge.svg')} alt="Install on VS Code Marketplace" class="h-[54px]">
+      </a>
     </section>
   </div>
 </BaseLayout>
