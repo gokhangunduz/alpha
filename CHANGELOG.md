@@ -5,39 +5,46 @@ All notable changes to the Alpha theme are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
 ## [0.1.0] - 2026-06-03
 
 ### Added
 
-- New **alpha light** variant — UI matches GitHub Light Default v6.3.5 byte-for-byte. Syntax palette uses the same seven hues as the dark variant, retuned per-hue (saturation 100%, lightness lowered) so every token meets WCAG-AA contrast (≥4.5:1) on white while preserving equal perceived weight across colors.
+- `alpha light` variant. The interface matches GitHub Light Default v6.3.5 byte-for-byte.
+- `galleryBanner`, `homepage`, and `bugs` fields in `package.json` for richer Marketplace presentation.
+- Expanded `keywords` list to improve Marketplace discoverability.
 
 ### Changed
 
-- Dark variant renamed from `alpha` to **alpha dark** in the theme picker.
-- UI colors of the dark variant now match GitHub Dark Default v6.3.5 byte-for-byte (editor, sidebar, status bar, terminal ANSI, git decorations, tabs, panels, debug, peek view, etc.).
-- README rewritten with palette table, install instructions, and marketplace badges.
-- `package.json` metadata expanded: `keywords`, `galleryBanner`, `homepage`, `bugs`; `engines.vscode` lowered to `^1.74.0` for broader compatibility.
+- **Dark variant interface now matches GitHub Dark Default v6.3.5 byte-for-byte.** Editor, sidebar, status bar, tabs, panels, terminal ANSI, git decorations, debug, and peek view colors are all updated.
+- Dark variant renamed from `alpha` to `alpha dark` in the theme picker.
+- Light variant syntax palette retuned per hue (saturation kept at 100%, lightness lowered) so every color clears WCAG-AA contrast (≥ 4.5:1) on white.
+- Dark variant syntax palette is preserved exactly. The isoluminant HSL(_h_, 100%, 68%) palette is untouched.
+- `package.json` `description` rewritten to highlight the theme's distinctive features.
+- `engines.vscode` minimum lowered from `^1.80.0` to `^1.74.0` for broader VS Code compatibility.
+- README rewritten with a palette table, two-variant install instructions, and Marketplace badges.
 
-### Unchanged
+### Fixed
 
-- Syntax (token) colors and semantic token colors are preserved exactly — the isoluminant HSL(*, 100%, 68%) palette is untouched and applied to both variants.
+- Repository URL in `package.json` after the upstream repo was renamed from `alpha-theme` to `alpha`.
 
 ## [0.0.4] - 2023-07-22
 
 ### Added
 
-- Theme screenshots.
+- Theme screenshots in the README.
 
 ### Changed
 
-- Updated README.
+- README polish.
 
 ## [0.0.3] - 2023-07-21
 
 ### Changed
 
-- Updated README.
-- Updated folder structure.
+- Folder layout reorganized.
+- README content updated.
 
 ## [0.0.2] - 2023-07-21
 
@@ -50,3 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Initial release.
+
+<!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
+[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/gokhangunduz/alpha/releases/tag/v0.1.0
