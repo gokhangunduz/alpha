@@ -5,7 +5,7 @@ interface Props {
   title: string;
   description: string;
   canonical: string;
-  activeNav?: 'about' | 'changelog' | 'faq' | 'contact';
+  activeNav?: 'about' | 'changelog' | 'license' | 'contact';
   schema?: Record<string, unknown>;
   ogImage?: string;
 }
@@ -21,7 +21,7 @@ const { title, description, canonical, activeNav, schema, ogImage = OG_DEFAULT }
 const navItems = [
   { href: url('/about'),     label: 'About',     key: 'about'     },
   { href: url('/changelog'), label: 'Changelog', key: 'changelog' },
-  { href: url('/faq'),       label: 'FAQ',       key: 'faq'       },
+  { href: url('/license'),   label: 'License',   key: 'license'   },
   { href: url('/contact'),   label: 'Contact',   key: 'contact'   },
 ] as const;
 ---
