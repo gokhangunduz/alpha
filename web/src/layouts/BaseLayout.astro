@@ -5,7 +5,7 @@ interface Props {
   title: string;
   description: string;
   path?: string;
-  activeNav?: 'changelog';
+  activeNav?: 'about' | 'changelog' | 'contact';
 }
 
 const { title, description, path = '/', activeNav } = Astro.props;
@@ -14,7 +14,9 @@ const canonical = `https://gokhangunduz.github.io${base}${path === '/' ? '' : pa
 const ogImage = `${base}/og.png`;
 
 const navItems = [
+  { href: `${base}/about`,     label: 'About',     key: 'about'     },
   { href: `${base}/changelog`, label: 'Changelog', key: 'changelog' },
+  { href: `${base}/contact`,   label: 'Contact',   key: 'contact'   },
 ] as const;
 
 const MARKETPLACE_URL = 'https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha';
@@ -86,9 +88,11 @@ const GITHUB_URL = 'https://github.com/gokhangunduz/alpha';
     <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
       <p class="text-[13px] text-dim">&copy; 2026 G&ouml;khan G&uuml;nd&uuml;z &middot; MIT License</p>
       <div class="flex flex-wrap gap-x-5 gap-y-2">
+        <a href={`${base}/about`}     class="text-[13px] text-dim hover:text-muted no-underline transition-colors">About</a>
+        <a href={`${base}/changelog`} class="text-[13px] text-dim hover:text-muted no-underline transition-colors">Changelog</a>
+        <a href={`${base}/contact`}   class="text-[13px] text-dim hover:text-muted no-underline transition-colors">Contact</a>
         <a href={MARKETPLACE_URL} target="_blank" rel="noopener" class="text-[13px] text-dim hover:text-muted no-underline transition-colors">Marketplace</a>
         <a href={GITHUB_URL} target="_blank" rel="noopener" class="text-[13px] text-dim hover:text-muted no-underline transition-colors">GitHub</a>
-        <a href={`${base}/changelog`} class="text-[13px] text-dim hover:text-muted no-underline transition-colors">Changelog</a>
       </div>
     </div>
   </footer>
