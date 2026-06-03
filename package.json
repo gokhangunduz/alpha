@@ -16,10 +16,6 @@
   "categories": [
     "Themes"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gokhangunduz/alpha"
-  },
   "keywords": [
     "theme",
     "dark",
@@ -30,6 +26,14 @@
     "alpha",
     "gokhangunduz"
   ],
+  "galleryBanner": {
+    "color": "#0d1117",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gokhangunduz/alpha"
+  },
   "contributes": {
     "themes": [
       {
