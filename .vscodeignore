@@ -6,3 +6,5 @@
 .editorconfig
 *.vsix
 node_modules/**
+web/**
+docs/**
