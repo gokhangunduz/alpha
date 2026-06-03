@@ -14,7 +14,7 @@ const schema = {
   name: 'alpha',
   applicationCategory: 'DeveloperApplication',
   operatingSystem: 'VS Code',
-  description: "A VS Code theme pairing GitHub's UI byte-for-byte with a perceptually balanced isoluminant syntax palette. Dark and light variants.",
+  description: "A VS Code theme with a clean, restrained interface and a perceptually balanced isoluminant syntax palette. Dark and light variants.",
   url: SITE,
   image: `${SITE}/app-icon.png`,
   author: {
@@ -42,10 +42,10 @@ const palette = [
 ];
 
 const features = [
-  { icon: '🎨', title: 'Two variants',          desc: 'alpha dark and alpha light. UI matches GitHub Dark Default and GitHub Light Default v6.3.5, byte-for-byte. Switch with the OS, or pin one.' },
+  { icon: '🎨', title: 'Two variants',          desc: 'alpha dark and alpha light. A clean, familiar surface in both — switch with the OS, or pin one.' },
   { icon: '⚖️', title: 'Isoluminant palette',   desc: 'Dark variant locks every syntax color at HSL(h, 100%, 68%). Only the hue rotates, so no token visually outweighs another.' },
   { icon: '☀️', title: 'WCAG-AA in light',      desc: 'Light variant retunes lightness per hue to clear ≥ 4.5:1 contrast on white. Saturation stays at 100%, weight stays equal.' },
-  { icon: '🧩', title: 'GitHub-native chrome',  desc: 'Editor, sidebar, status bar, tabs, panels, terminal ANSI, git decorations — all sourced from the official GitHub themes.' },
+  { icon: '🧩', title: 'Restrained chrome',     desc: 'Editor, sidebar, status bar, tabs, panels, terminal, and git decorations are tuned to stay quiet, so the code can speak.' },
   { icon: '🆓', title: 'Free & MIT',             desc: 'No paywalls, no telemetry, no account. Open source under the MIT License, hosted on GitHub.' },
   { icon: '⚡', title: 'Broad VS Code support', desc: 'Runs on VS Code 1.74 and up. Installs in seconds from the Marketplace or via the CLI.' },
 ];
@@ -53,25 +53,33 @@ const features = [
 
 <BaseLayout
   title="alpha — a VS Code theme"
-  description="A VS Code theme pairing GitHub's UI byte-for-byte with a perceptually balanced isoluminant syntax palette. Dark and light variants."
+  description="A VS Code theme with a clean, restrained interface and a perceptually balanced isoluminant syntax palette. Dark and light variants."
   canonical={SITE}
   schema={schema}
 >
   <!-- Hero -->
-  <section class="hero-gradient min-h-[78vh] flex flex-col items-center justify-center text-center px-6 pt-20 pb-16">
+  <section class="hero-gradient min-h-screen flex flex-col items-center justify-center text-center px-6">
     <img src={url('/app-icon.png')} alt="alpha icon" class="w-[120px] h-[120px] rounded-[27px] mb-8 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
     <h1 class="text-[56px] font-bold tracking-[-2px] text-text-primary mb-4">alpha</h1>
     <p class="text-[21px] text-text-secondary max-w-[560px] mx-auto mb-10 leading-[1.5]">
-      A VS Code theme pairing <span class="text-text-primary">GitHub's UI</span> byte-for-byte with a perceptually balanced <span class="text-text-primary">isoluminant</span> syntax palette.
+      A VS Code theme with a <span class="text-text-primary">clean, restrained interface</span> and a perceptually balanced <span class="text-text-primary">isoluminant</span> syntax palette.
     </p>
-    <div class="flex flex-col sm:flex-row gap-3 items-center">
-      <a href={MARKETPLACE_URL} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-[12px] bg-accent-orange hover:bg-accent-orange-h text-white font-semibold text-[15px] no-underline transition-colors">
-        Install from Marketplace
-      </a>
-      <a href={GITHUB_URL} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 rounded-[12px] border border-white/[0.12] hover:border-white/[0.24] text-text-primary font-semibold text-[15px] no-underline transition-colors">
-        View on GitHub
-      </a>
-    </div>
+    <a
+      href={MARKETPLACE_URL}
+      target="_blank"
+      rel="noopener"
+      aria-label="Install alpha on the VS Code Marketplace"
+      class="inline-flex items-center gap-3 h-[54px] px-5 bg-black hover:bg-[#1a1a1a] text-white rounded-[10px] border border-white/[0.18] no-underline transition-colors"
+    >
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M17.5 2.5l-12 8L2.5 8 1 9l3.5 3L1 15l1.5 1 3-2.5 12 8L23 19V5z" fill="#0098FF"/>
+        <path d="M17.5 7.5L9 12l8.5 4.5z" fill="#0d1117" opacity="0.35"/>
+      </svg>
+      <span class="flex flex-col items-start leading-tight text-left">
+        <span class="text-[10px] uppercase tracking-[0.12em] text-white/85">Install on</span>
+        <span class="text-[17px] font-semibold -mt-0.5">VS Code Marketplace</span>
+      </span>
+    </a>
   </section>
 
   <!-- Two variants -->
@@ -168,24 +176,31 @@ const features = [
 
   <div class="max-w-site mx-auto px-6"><div class="h-px bg-white/[0.06]"></div></div>
 
-  <!-- Screenshots -->
-  <section class="max-w-site mx-auto px-6 py-20">
-    <div class="text-center mb-12">
-      <h2 class="text-[40px] font-bold tracking-[-1px] text-text-primary mb-3">In your editor</h2>
-      <p class="text-[18px] text-text-secondary max-w-[480px] mx-auto">
-        The same VS Code you know — GitHub's chrome, alpha's palette.
-      </p>
+  <!-- Screenshots carousel -->
+  <section class="py-20 overflow-hidden w-full">
+    <div class="max-w-site mx-auto px-6">
+      <div class="text-center pb-10">
+        <h2 class="text-[40px] font-bold tracking-[-1px] text-text-primary mb-3">In your editor</h2>
+        <p class="text-[18px] text-text-secondary max-w-[480px] mx-auto">
+          Familiar surfaces. A palette tuned to disappear into them.
+        </p>
+      </div>
     </div>
-    <div class="grid grid-cols-1 gap-5">
-      {[
-        { src: url('/images/screenshots/screenshot-1.jpeg'), alt: 'alpha dark — JavaScript editor view' },
-        { src: url('/images/screenshots/screenshot-2.jpeg'), alt: 'alpha dark — command palette open' },
-        { src: url('/images/screenshots/screenshot-3.jpeg'), alt: 'alpha dark — quick open' },
-      ].map(({ src, alt }) => (
-        <div class="rounded-[20px] overflow-hidden border border-white/[0.06] shadow-[0_16px_48px_rgba(0,0,0,0.4)]">
-          <img src={src} alt={alt} loading="lazy" class="block w-full h-auto">
-        </div>
-      ))}
+    <div class="relative w-full before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[140px] before:z-[2] before:pointer-events-none before:bg-gradient-to-r before:from-background before:to-transparent after:absolute after:right-0 after:top-0 after:bottom-0 after:w-[140px] after:z-[2] after:pointer-events-none after:bg-gradient-to-l after:from-background after:to-transparent">
+      <div class="flex gap-6 w-max animate-marquee">
+        {(() => {
+          const shots = [
+            { src: url('/images/screenshots/screenshot-1.jpeg'), alt: 'alpha dark — JavaScript editor view' },
+            { src: url('/images/screenshots/screenshot-2.jpeg'), alt: 'alpha dark — command palette open' },
+            { src: url('/images/screenshots/screenshot-3.jpeg'), alt: 'alpha dark — quick open' },
+          ];
+          return [...shots, ...shots, ...shots, ...shots].map(({ src, alt }, i) => (
+            <div class="flex-none w-[560px] rounded-[20px] overflow-hidden border border-white/[0.06] shadow-[0_16px_48px_rgba(0,0,0,0.4)]">
+              <img src={src} alt={i >= shots.length ? '' : alt} loading="lazy" class="block w-full h-auto pointer-events-none" aria-hidden={i >= shots.length ? 'true' : undefined}>
+            </div>
+          ));
+        })()}
+      </div>
     </div>
   </section>
 
