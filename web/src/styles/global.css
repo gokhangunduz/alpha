@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* GitHub Dark Default palette — matches the alpha theme's UI identity */
+  --c-bg:        13 17 23;     /* #0d1117 */
+  --c-surface:   22 27 34;     /* #161b22 */
+  --c-border:    48 54 61;     /* #30363d */
+  --c-fg:        230 237 243;  /* #e6edf3 */
+  --c-muted:     125 133 144;  /* #7d8590 */
+  --c-dim:       72 79 88;     /* #484f58 */
+  --c-accent:    47 129 247;   /* #2f81f7 */
+  --c-accent-h:  88 166 255;   /* #58a6ff */
+
+  /* Alpha syntax palette (dark variant) — used for palette swatches */
+  --hue-red:     255 92 92;
+  --hue-orange:  255 146 92;
+  --hue-yellow:  255 225 92;
+  --hue-green:   92 255 154;
+  --hue-cyan:    92 239 255;
+  --hue-blue:    92 143 255;
+  --hue-purple:  211 92 255;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(var(--c-bg));
+    color: rgb(var(--c-fg));
+  }
+
+  :focus-visible {
+    outline: 2px solid rgb(var(--c-accent));
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: rgb(var(--c-accent) / 0.35);
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgb(var(--c-accent) / 0.10) 0%, transparent 70%),
+      radial-gradient(ellipse 60% 40% at 50% 100%, rgb(var(--c-accent) / 0.05) 0%, transparent 70%);
+  }
+}
