@@ -16,7 +16,7 @@ const schema = {
   operatingSystem: 'VS Code',
   description: "A VS Code theme with a clean, restrained interface and a perceptually balanced isoluminant syntax palette. Dark and light variants.",
   url: SITE,
-  image: `${SITE}/app-icon.png`,
+  image: `${SITE}/app-icon.webp`,
   author: {
     '@type': 'Person',
     name: 'Gökhan Gündüz',
@@ -59,7 +59,7 @@ const features = [
 >
   <!-- Hero -->
   <section class="hero-gradient min-h-screen flex flex-col items-center justify-center text-center px-6">
-    <img src={url('/app-icon.png')} alt="alpha icon" class="w-[120px] h-[120px] rounded-[27px] mb-8 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+    <img src={url('/app-icon.webp')} alt="alpha icon" class="w-[120px] h-[120px] rounded-[27px] mb-8 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
     <h1 class="text-[56px] font-bold tracking-[-2px] text-text-primary mb-4">alpha</h1>
     <p class="text-[21px] text-text-secondary max-w-[560px] mx-auto mb-10 leading-[1.5]">
       A VS Code theme with a <span class="text-text-primary">clean, restrained interface</span> and a perceptually balanced <span class="text-text-primary">isoluminant</span> syntax palette.
@@ -190,9 +190,9 @@ const features = [
       <div class="flex gap-6 w-max animate-marquee">
         {(() => {
           const shots = [
-            { src: url('/images/screenshots/screenshot-1.jpeg'), alt: 'alpha dark — JavaScript editor view' },
-            { src: url('/images/screenshots/screenshot-2.jpeg'), alt: 'alpha dark — command palette open' },
-            { src: url('/images/screenshots/screenshot-3.jpeg'), alt: 'alpha dark — quick open' },
+            { src: url('/images/screenshots/screenshot-1.webp'), alt: 'alpha dark — JavaScript editor view' },
+            { src: url('/images/screenshots/screenshot-2.webp'), alt: 'alpha dark — command palette open' },
+            { src: url('/images/screenshots/screenshot-3.webp'), alt: 'alpha dark — quick open' },
           ];
           return [...shots, ...shots, ...shots, ...shots].map(({ src, alt }, i) => (
             <div class="flex-none w-[560px] rounded-[20px] overflow-hidden border border-white/[0.06] shadow-[0_16px_48px_rgba(0,0,0,0.4)]">

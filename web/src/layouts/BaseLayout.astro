@@ -14,7 +14,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const url = (p: string) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
 
 const SITE_URL = 'https://gokhangunduz.github.io/alpha';
-const OG_DEFAULT = `${SITE_URL}/app-icon.png`;
+const OG_DEFAULT = `${SITE_URL}/app-icon.webp`;
 
 const { title, description, canonical, activeNav, schema, ogImage = OG_DEFAULT } = Astro.props;
 
@@ -45,8 +45,8 @@ const navItems = [
   <meta name="twitter:title" content={title}>
   <meta name="twitter:description" content={description}>
   <meta name="twitter:image" content={ogImage}>
-  <link rel="icon" type="image/png" href={url('/app-icon.png')}>
-  <link rel="apple-touch-icon" href={url('/app-icon.png')}>
+  <link rel="icon" type="image/webp" href={url('/app-icon.webp')}>
+  <link rel="apple-touch-icon" href={url('/app-icon.webp')}>
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
@@ -62,7 +62,7 @@ const navItems = [
   <nav class="sticky top-0 z-[100] border-b border-white/[0.06] bg-background/[0.82] backdrop-blur-xl" style="backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);">
     <div class="mx-auto flex max-w-site items-center justify-between px-6 py-[14px]">
       <a href={url('/')} class="flex items-center gap-2.5 text-[15px] font-semibold text-text-primary no-underline shrink-0">
-        <img src={url('/app-icon.png')} alt="alpha" width="28" height="28" class="rounded-[6px]">
+        <img src={url('/app-icon.webp')} alt="alpha" width="28" height="28" class="rounded-[6px]">
         alpha
       </a>
 
