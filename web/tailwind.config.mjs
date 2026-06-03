@@ -4,22 +4,32 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg:           'rgb(var(--c-bg) / <alpha-value>)',
-        surface:      'rgb(var(--c-surface) / <alpha-value>)',
-        border:       'rgb(var(--c-border) / <alpha-value>)',
-        fg:           'rgb(var(--c-fg) / <alpha-value>)',
-        muted:        'rgb(var(--c-muted) / <alpha-value>)',
-        dim:          'rgb(var(--c-dim) / <alpha-value>)',
-        accent:       'rgb(var(--c-accent) / <alpha-value>)',
-        'accent-h':   'rgb(var(--c-accent-h) / <alpha-value>)',
+        background:        'rgb(var(--color-bg) / <alpha-value>)',
+        card:              'rgb(var(--color-card) / <alpha-value>)',
+        'text-primary':    'rgb(var(--color-text-primary) / <alpha-value>)',
+        'text-secondary':  'rgb(var(--color-text-secondary) / <alpha-value>)',
+        'text-tertiary':   'rgb(var(--color-text-tertiary) / <alpha-value>)',
+        'text-muted':      'rgb(var(--color-text-muted) / <alpha-value>)',
+        'text-dim':        'rgb(var(--color-text-dim) / <alpha-value>)',
+        'text-strong':     'rgb(var(--color-text-strong) / <alpha-value>)',
+        'accent-orange':   'rgb(var(--color-accent-orange) / <alpha-value>)',
+        'accent-orange-h': 'rgb(var(--color-accent-orange-h) / <alpha-value>)',
+        'accent-purple':   'rgb(var(--color-accent-purple) / <alpha-value>)',
+        'accent-green':    'rgb(var(--color-accent-green) / <alpha-value>)',
+        'accent-pink':     'rgb(var(--color-accent-pink) / <alpha-value>)',
       },
       maxWidth: {
-        site: '980px',
+        site:   '980px',
         narrow: '680px',
       },
-      fontFamily: {
-        sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Text"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
-        mono: ['"SF Mono"', 'ui-monospace', 'Menlo', 'Monaco', '"Cascadia Code"', 'monospace'],
+      keyframes: {
+        marquee: {
+          '0%':   { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 60s linear infinite',
       },
     },
   },

@@ -1,5 +1,3 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": ["src/**/*", ".astro/**/*"],
-  "exclude": ["dist", "../docs"]
+  "extends": "astro/tsconfigs/base"
 }
