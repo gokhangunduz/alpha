@@ -1,0 +1,59 @@
+---
+import ContentLayout from '../layouts/ContentLayout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const ISSUES_BUG = 'https://github.com/gokhangunduz/alpha/issues/new?template=bug_report.yml';
+const ISSUES_FEATURE = 'https://github.com/gokhangunduz/alpha/issues/new?template=feature_request.yml';
+const MARKETPLACE_URL = 'https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha';
+---
+
+<ContentLayout
+  title="Contact — alpha"
+  description="How to report bugs, suggest features, and reach the developer."
+  path="/contact"
+  activeNav="contact"
+  heading="Contact"
+  subtitle="Found a bug, have a color suggestion, or just want to say hi? Pick the channel that fits."
+>
+  <div class="contact-grid grid gap-4 my-8">
+    <a href={ISSUES_BUG} target="_blank" rel="noopener" class="block bg-surface border border-border/60 rounded-2xl px-6 py-7 no-underline transition-all hover:border-muted/60 hover:-translate-y-0.5">
+      <h3 class="text-[15px] font-semibold text-fg mb-1">Report a bug</h3>
+      <p class="text-[13px] !text-muted !mb-0">GitHub issue &middot; bug template</p>
+    </a>
+    <a href={ISSUES_FEATURE} target="_blank" rel="noopener" class="block bg-surface border border-border/60 rounded-2xl px-6 py-7 no-underline transition-all hover:border-muted/60 hover:-translate-y-0.5">
+      <h3 class="text-[15px] font-semibold text-fg mb-1">Suggest a feature</h3>
+      <p class="text-[13px] !text-muted !mb-0">GitHub issue &middot; feature template</p>
+    </a>
+    <a href="mailto:me@gokhangunduz.dev" class="block bg-surface border border-border/60 rounded-2xl px-6 py-7 no-underline transition-all hover:border-muted/60 hover:-translate-y-0.5">
+      <h3 class="text-[15px] font-semibold text-fg mb-1">Email</h3>
+      <p class="text-[13px] !text-muted !mb-0">me@gokhangunduz.dev</p>
+    </a>
+    <a href="https://gokhangunduz.dev" target="_blank" rel="noopener" class="block bg-surface border border-border/60 rounded-2xl px-6 py-7 no-underline transition-all hover:border-muted/60 hover:-translate-y-0.5">
+      <h3 class="text-[15px] font-semibold text-fg mb-1">Website</h3>
+      <p class="text-[13px] !text-muted !mb-0">gokhangunduz.dev</p>
+    </a>
+  </div>
+
+  <h2>Bug reports</h2>
+  <p>For UI mismatches, color quirks, or anything that looks off, use the <strong>bug report</strong> template on GitHub. Including your VS Code version, the alpha version, and a screenshot covers most of what's needed to reproduce.</p>
+
+  <h2>Feature &amp; color requests</h2>
+  <p>Have an idea for a tweak, a new variant, or a hue that would fit the palette better? Open a feature request. Color suggestions are welcome — send the hex value and a short note on why it would slot in.</p>
+
+  <h2>Marketplace reviews</h2>
+  <p>If alpha is working well for you, a quick rating on the <a href={MARKETPLACE_URL} target="_blank" rel="noopener">VS Code Marketplace</a> helps others find it.</p>
+
+  <h2>About the developer</h2>
+  <p>Curious who is behind alpha? See the <a href={`${base}/about`}>About page</a>.</p>
+</ContentLayout>
+
+<style>
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 520px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
