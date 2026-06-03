@@ -1,21 +1,37 @@
 ---
 import ContentLayout from '../layouts/ContentLayout.astro';
+
+const SITE = 'https://gokhangunduz.github.io/alpha';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',  item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'About', item: `${SITE}/about` },
+  ],
+};
 ---
 
 <ContentLayout
   title="About — alpha"
-  description="About alpha and the developer behind it."
-  path="/about"
+  description="The story behind alpha: a VS Code theme that pairs GitHub's interface with an isoluminant syntax palette."
+  canonical={`${SITE}/about`}
   activeNav="about"
   heading="About"
-  subtitle="A VS Code theme built by an independent developer."
+  subtitle="A VS Code theme built around two ideas: a familiar interface, and a palette where every color carries the same weight."
+  schema={schema}
 >
-  <h2>About alpha</h2>
-  <p>alpha is a free, open-source theme for Visual Studio Code. The interface matches GitHub Dark Default and GitHub Light Default v6.3.5 byte-for-byte. The syntax palette is designed so no single token type visually overpowers another.</p>
+  <h2>What alpha is</h2>
+  <p><strong>alpha</strong> is a Visual Studio Code color theme shipped in two variants — <strong>alpha dark</strong> and <strong>alpha light</strong>. The interface chrome (editor, sidebar, status bar, tabs, panels, terminal, git decorations) is sourced from the official GitHub themes at v6.3.5 and matched byte-for-byte. On top of that familiar surface, alpha replaces the syntax palette with seven hues tuned for equal perceived weight.</p>
+
+  <h2>The palette</h2>
+  <p>In the <strong>dark variant</strong>, every syntax color is locked at <strong>HSL(h, 100%, 68%)</strong>. Only the hue rotates. The result is strictly isoluminant — no token visually outweighs another, so the eye reads structure instead of brightness.</p>
+  <p>In the <strong>light variant</strong>, the same seven hues are retuned per channel: saturation stays at 100%, but lightness is lowered until each color clears <strong>≥ 4.5:1 contrast (WCAG-AA)</strong> on a white background. The variants look different, but they feel the same.</p>
+
+  <h2>Why a GitHub-matched UI</h2>
+  <p>The VS Code chrome is a solved problem. GitHub already publishes themes that pair well with GitHub.com, GitHub Desktop, and a thousand other tools developers use every day. alpha doesn't reinvent that — it adopts it, exactly, and spends its design budget where it matters: the code itself.</p>
 
   <h2>About the developer</h2>
-  <p>alpha is designed and developed by <a href="https://gokhangunduz.dev" target="_blank" rel="noopener"><strong>G&ouml;khan G&uuml;nd&uuml;z</strong></a>, an independent developer based in Ankara, Turkey. The project is <a href="https://github.com/gokhangunduz/alpha" target="_blank" rel="noopener">open source on GitHub</a> under the MIT license.</p>
-
-  <h2>Design philosophy</h2>
-  <p>The dark variant locks every hue to the same lightness — equal weight on a dark background. The light variant retunes lightness per hue so every color clears WCAG-AA contrast on white. Same intent, adapted to the medium.</p>
+  <p>alpha is designed and maintained by <a href="https://gokhangunduz.dev" target="_blank" rel="noopener"><strong>Gökhan Gündüz</strong></a>, an independent developer based in Ankara, Turkey. The theme is free, open source under the MIT License, and developed in public on <a href="https://github.com/gokhangunduz/alpha" target="_blank" rel="noopener">GitHub</a>.</p>
 </ContentLayout>

@@ -1,37 +1,58 @@
 ---
 import ContentLayout from '../layouts/ContentLayout.astro';
 
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const ISSUES_NEW = 'https://github.com/gokhangunduz/alpha/issues/new/choose';
+const SITE = 'https://gokhangunduz.github.io/alpha';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home',    item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: `${SITE}/contact` },
+  ],
+};
 ---
 
 <ContentLayout
   title="Contact — alpha"
-  description="Get in touch with the alpha developer."
-  path="/contact"
+  description="Report bugs, suggest colors, or reach the maintainer of the alpha VS Code theme."
+  canonical={`${SITE}/contact`}
   activeNav="contact"
   heading="Contact"
-  subtitle="Have a question, feedback, or feature request? I'd love to hear from you."
+  subtitle="Bug reports, palette suggestions, or pull requests — everything's welcome."
+  schema={schema}
 >
   <div class="contact-grid grid gap-4 my-8 [&_p]:!mb-0">
-    <a href="mailto:me@gokhangunduz.dev" class="block bg-surface border border-border/60 rounded-2xl px-6 py-7 no-underline transition-all hover:border-muted/60 hover:-translate-y-0.5">
-      <h3 class="text-[15px] font-semibold text-fg mb-1">Email</h3>
-      <p class="text-[14px] !text-muted">me@gokhangunduz.dev</p>
+    <a href="https://github.com/gokhangunduz/alpha/issues/new?template=bug_report.yml" target="_blank" rel="noopener" class="block bg-card border border-white/[0.06] rounded-2xl px-6 py-7 no-underline transition-all duration-300 hover:border-white/[0.12] hover:-translate-y-0.5">
+      <div class="text-[28px] mb-3.5">🐛</div>
+      <h3 class="text-[15px] font-semibold text-text-primary mb-1">Report a bug</h3>
+      <p class="text-[14px] !text-text-secondary">Open an issue on GitHub</p>
     </a>
-    <a href="https://gokhangunduz.dev" target="_blank" rel="noopener" class="block bg-surface border border-border/60 rounded-2xl px-6 py-7 no-underline transition-all hover:border-muted/60 hover:-translate-y-0.5">
-      <h3 class="text-[15px] font-semibold text-fg mb-1">Website</h3>
-      <p class="text-[14px] !text-muted">gokhangunduz.dev</p>
+    <a href="https://github.com/gokhangunduz/alpha/issues/new?template=feature_request.yml" target="_blank" rel="noopener" class="block bg-card border border-white/[0.06] rounded-2xl px-6 py-7 no-underline transition-all duration-300 hover:border-white/[0.12] hover:-translate-y-0.5">
+      <div class="text-[28px] mb-3.5">🎨</div>
+      <h3 class="text-[15px] font-semibold text-text-primary mb-1">Suggest a color</h3>
+      <p class="text-[14px] !text-text-secondary">Propose a palette tweak</p>
+    </a>
+    <a href="mailto:me@gokhangunduz.dev" class="block bg-card border border-white/[0.06] rounded-2xl px-6 py-7 no-underline transition-all duration-300 hover:border-white/[0.12] hover:-translate-y-0.5">
+      <div class="text-[28px] mb-3.5">✉️</div>
+      <h3 class="text-[15px] font-semibold text-text-primary mb-1">Email</h3>
+      <p class="text-[14px] !text-text-secondary">me@gokhangunduz.dev</p>
+    </a>
+    <a href="https://gokhangunduz.dev" target="_blank" rel="noopener" class="block bg-card border border-white/[0.06] rounded-2xl px-6 py-7 no-underline transition-all duration-300 hover:border-white/[0.12] hover:-translate-y-0.5">
+      <div class="text-[28px] mb-3.5">🌐</div>
+      <h3 class="text-[15px] font-semibold text-text-primary mb-1">Website</h3>
+      <p class="text-[14px] !text-text-secondary">gokhangunduz.dev</p>
     </a>
   </div>
 
-  <h2>Support</h2>
-  <p>If you've found a bug, please <a href={ISSUES_NEW} target="_blank" rel="noopener">open an issue on GitHub</a> with your VS Code version, the alpha version, and a screenshot if relevant.</p>
+  <h2>Reporting issues</h2>
+  <p>If something looks off — a token that's too dim, a UI element that doesn't match GitHub's reference, or a regression after an update — please open a GitHub issue with a screenshot, the affected language, and the VS Code version. Issues with reproducible context are usually resolved within a few days.</p>
 
-  <h2>Feature requests</h2>
-  <p>Got an idea or a color suggestion? <a href={ISSUES_NEW} target="_blank" rel="noopener">Open a feature request</a> on GitHub.</p>
+  <h2>Palette suggestions</h2>
+  <p>alpha's syntax palette is deliberately small (seven hues) and constrained (strict isoluminance in dark, WCAG-AA in light). Suggestions that fit those rules are very welcome. Suggestions that break them get serious thought too — sometimes a rule deserves to bend.</p>
 
-  <h2>About the developer</h2>
-  <p>Want to know more about the developer behind alpha? Visit the <a href={`${base}/about`}>About page</a>.</p>
+  <h2>About</h2>
+  <p>Want to know more about the theme and the developer? Visit the <a href="/alpha/about">About page</a>.</p>
 </ContentLayout>
 
 <style>

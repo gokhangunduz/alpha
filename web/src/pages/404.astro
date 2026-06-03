@@ -2,24 +2,24 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const url = (p: string) => `${base}${p.startsWith('/') ? p : `/${p}`}`;
+
+const SITE = 'https://gokhangunduz.github.io/alpha';
 ---
 
 <BaseLayout
   title="Not found — alpha"
-  description="The page you are looking for does not exist."
-  path="/404"
+  description="The page you're looking for doesn't exist."
+  canonical={`${SITE}/404`}
 >
-  <section class="max-w-site mx-auto px-6 pt-32 pb-24 text-center">
-    <p class="font-mono text-[14px] text-dim mb-4">404</p>
-    <h1 class="text-[40px] md:text-[56px] font-bold tracking-[-1.5px] mb-4">Not found</h1>
-    <p class="text-[17px] text-muted max-w-[440px] mx-auto mb-10">
-      That route does not match any page in this site.
+  <div class="min-h-[78vh] flex flex-col items-center justify-center text-center px-6">
+    <p class="text-[80px] font-bold text-text-dim mb-4 leading-none">404</p>
+    <h1 class="text-[28px] font-bold text-text-primary mb-3">Page not found</h1>
+    <p class="text-[17px] text-text-secondary max-w-[400px] mx-auto mb-10">
+      The page you're looking for doesn't exist or has moved.
     </p>
-    <a
-      href={`${base}/`}
-      class="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:border-muted text-fg font-semibold text-[15px] no-underline transition-colors"
-    >
-      &larr; Back home
+    <a href={url('/')} class="inline-flex items-center gap-2 bg-accent-orange text-white text-[15px] font-semibold px-6 py-3 rounded-[12px] no-underline transition-opacity hover:opacity-80">
+      Go back home
     </a>
-  </section>
+  </div>
 </BaseLayout>
