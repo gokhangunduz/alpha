@@ -1,0 +1,27 @@
+---
+import ContentLayout from '../layouts/ContentLayout.astro';
+---
+
+<ContentLayout
+  title="About — alpha"
+  description="What alpha is, why it exists, and who built it."
+  path="/about"
+  activeNav="about"
+  heading="About"
+  subtitle="A VS Code theme built around two simple ideas."
+>
+  <h2>What alpha is</h2>
+  <p>alpha is a free, open-source theme for Visual Studio Code. It pairs <strong>GitHub's official interface palette</strong> with a <strong>perceptually balanced syntax palette</strong>. The window chrome, sidebar, editor surfaces, terminal, and git decorations are matched byte-for-byte to GitHub Dark Default and GitHub Light Default v6.3.5. The code colors are designed so no single token type visually overpowers another.</p>
+
+  <h2>Why two variants</h2>
+  <p>The dark variant locks every syntax color at HSL(<em>h</em>, 100%, 68%) — strict isoluminance, identical perceived weight on a dark background. The light variant retunes lightness per hue so every color clears WCAG-AA contrast on white while preserving the same seven hue identities. Same intent, adapted to the medium.</p>
+
+  <h2>Why GitHub's UI</h2>
+  <p>GitHub Dark and GitHub Light are among the most carefully tuned editor interfaces shipping today — readable for long sessions, accessible, and visually quiet. There was no reason to reinvent that. alpha keeps the chrome you already know and spends its design budget where it matters: the colors of the code itself.</p>
+
+  <h2>The palette</h2>
+  <p>Seven hues, one per major token family — variables, constants, classes, strings, functions, operators, keywords. The hue assignments are warm-clustered: red / orange / yellow for the three highest-frequency tokens (variables, constants, classes), leaving cool tones for the rest. This is deliberate — most code is variables and types, and the eye discriminates warm hues more easily.</p>
+
+  <h2>About the developer</h2>
+  <p>alpha is built by <a href="https://gokhangunduz.dev" target="_blank" rel="noopener"><strong>G&ouml;khan G&uuml;nd&uuml;z</strong></a>, an independent developer based in Ankara. The project is <a href="https://github.com/gokhangunduz/alpha" target="_blank" rel="noopener">open source on GitHub</a> under the MIT license. Issues and pull requests are welcome.</p>
+</ContentLayout>
