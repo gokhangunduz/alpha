@@ -1,0 +1,91 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  activeNav?: 'about' | 'changelog' | 'contact';
+  heading: string;
+  subtitle: string;
+}
+
+const { heading, subtitle, ...baseProps } = Astro.props;
+---
+
+<BaseLayout {...baseProps}>
+  <div class="max-w-narrow mx-auto px-6 py-14 md:py-20">
+    <header class="mb-10">
+      <p class="text-[12px] uppercase tracking-wider text-dim mb-3">{Astro.props.activeNav}</p>
+      <h1 class="text-[36px] md:text-[44px] font-bold tracking-[-1px] text-fg mb-2">{heading}</h1>
+      <p class="text-[17px] text-muted leading-[1.5]">{subtitle}</p>
+    </header>
+
+    <div class="content-body">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+  .content-body h2 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    margin-top: 36px;
+    margin-bottom: 10px;
+    color: rgb(var(--c-fg));
+  }
+  .content-body h2:first-child { margin-top: 0; }
+  .content-body p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgb(var(--c-muted));
+    margin-bottom: 14px;
+  }
+  .content-body strong {
+    color: rgb(var(--c-fg));
+    font-weight: 600;
+  }
+  .content-body em {
+    font-style: italic;
+    color: rgb(var(--c-fg));
+  }
+  .content-body a {
+    color: rgb(var(--c-accent));
+    text-decoration: none;
+  }
+  .content-body a:hover { text-decoration: underline; }
+  .content-body ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 14px;
+  }
+  .content-body li {
+    position: relative;
+    padding-left: 20px;
+    padding-block: 6px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: rgb(var(--c-muted));
+  }
+  .content-body li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 6px;
+    height: 6px;
+    background: rgb(var(--c-accent));
+    border-radius: 50%;
+  }
+  .content-body code {
+    background: rgb(var(--c-surface));
+    border: 1px solid rgb(var(--c-border) / 0.6);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: rgb(var(--c-fg));
+    font-family: "SF Mono", ui-monospace, Menlo, Monaco, monospace;
+  }
+</style>
