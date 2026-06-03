@@ -1,7 +1,7 @@
 {
   "name": "alpha",
   "displayName": "Alpha",
-  "description": "Alpha is a dark theme for Visual Studio Code.",
+  "description": "A dark VS Code theme pairing GitHub Dark Default's UI with a balanced isoluminant syntax palette.",
   "version": "0.0.4",
   "license": "MIT",
   "icon": "assets/alpha.png",
