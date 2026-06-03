@@ -11,13 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `alpha light` variant. The interface matches GitHub Light Default v6.3.5 byte-for-byte.
+- `alpha light` variant with a fully retuned interface and syntax palette for white backgrounds.
 - `galleryBanner`, `homepage`, and `bugs` fields in `package.json` for richer Marketplace presentation.
 - Expanded `keywords` list to improve Marketplace discoverability.
 
 ### Changed
 
-- **Dark variant interface now matches GitHub Dark Default v6.3.5 byte-for-byte.** Editor, sidebar, status bar, tabs, panels, terminal ANSI, git decorations, debug, and peek view colors are all updated.
+- **Dark variant interface rebuilt for a cleaner, more restrained surface.** Editor, sidebar, status bar, tabs, panels, terminal ANSI, git decorations, debug, and peek view colors are all updated.
 - Dark variant renamed from `alpha` to `alpha dark` in the theme picker.
 - Light variant syntax palette retuned per hue (saturation kept at 100%, lightness lowered) so every color clears WCAG-AA contrast (≥ 4.5:1) on white.
 - Dark variant syntax palette is preserved exactly. The isoluminant HSL(_h_, 100%, 68%) palette is untouched.

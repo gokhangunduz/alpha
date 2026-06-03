@@ -1,7 +1,7 @@
 {
   "name": "alpha",
   "displayName": "Alpha",
-  "description": "A dark VS Code theme pairing GitHub Dark Default's UI with a balanced isoluminant syntax palette.",
+  "description": "A VS Code theme with a clean, restrained interface and a perceptually balanced isoluminant syntax palette. Dark and light variants.",
   "version": "0.1.0",
   "license": "MIT",
   "icon": "assets/alpha.png",
@@ -19,10 +19,12 @@
   "keywords": [
     "theme",
     "dark",
+    "light",
     "dark theme",
+    "light theme",
     "color theme",
-    "github",
-    "github dark",
+    "isoluminant",
+    "minimal",
     "alpha",
     "gokhangunduz"
   ],

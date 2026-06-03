@@ -8,9 +8,9 @@
 
 **Website:** [gokhangunduz.github.io/alpha](https://gokhangunduz.github.io/alpha) &middot; **Changelog:** [view online](https://gokhangunduz.github.io/alpha/changelog) &middot; **Issues:** [GitHub](https://github.com/gokhangunduz/alpha/issues)
 
-A VS Code theme in two variants — **alpha dark** and **alpha light** — that pair the **GitHub Default** interface with a perceptually balanced syntax palette.
+A VS Code theme in two variants — **alpha dark** and **alpha light** — that pair a clean, restrained interface with a perceptually balanced syntax palette.
 
-The interface (chrome, sidebar, editor surfaces, terminal) is matched byte-for-byte to GitHub's official themes at v6.3.5: GitHub Dark Default for the dark variant, GitHub Light Default for the light variant.
+The interface (chrome, sidebar, editor surfaces, terminal) is deliberately quiet so the syntax does the talking.
 
 The syntax palette uses the same seven hues in both variants, but the lightness is tuned per background so every token reads with equal weight:
 
