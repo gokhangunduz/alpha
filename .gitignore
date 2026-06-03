@@ -1,1 +1,5 @@
 *.vsix
+node_modules/
+web/.astro/
+web/dist/
+.DS_Store
