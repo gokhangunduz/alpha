@@ -11,5 +11,13 @@ export default defineConfig({
     format: 'file',
     assets: 'assets',
   },
-  integrations: [tailwind(), sitemap()],
+  integrations: [
+    tailwind(),
+    sitemap({
+      changefreq: 'monthly',
+      priority: 0.7,
+      lastmod: new Date(),
+      filter: (page) => !page.endsWith('/404'),
+    }),
+  ],
 });
