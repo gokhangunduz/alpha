@@ -3,7 +3,10 @@
 [![Version](https://img.shields.io/visual-studio-marketplace/v/gokhangunduz.alpha?label=version)](https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha)
 [![Installs](https://img.shields.io/visual-studio-marketplace/i/gokhangunduz.alpha)](https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha)
 [![Rating](https://img.shields.io/visual-studio-marketplace/r/gokhangunduz.alpha)](https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha)
+[![Pages](https://github.com/gokhangunduz/alpha/actions/workflows/pages.yml/badge.svg)](https://gokhangunduz.github.io/alpha)
 [![License](https://img.shields.io/github/license/gokhangunduz/alpha)](./LICENSE)
+
+**Website:** [gokhangunduz.github.io/alpha](https://gokhangunduz.github.io/alpha) &middot; **Changelog:** [view online](https://gokhangunduz.github.io/alpha/changelog) &middot; **Issues:** [GitHub](https://github.com/gokhangunduz/alpha/issues)
 
 A VS Code theme in two variants — **alpha dark** and **alpha light** — that pair the **GitHub Default** interface with a perceptually balanced syntax palette.
 
@@ -53,7 +56,11 @@ Or grab it directly from the [Marketplace](https://marketplace.visualstudio.com/
 
 ## Contributing
 
-Bug reports and pull requests are welcome on the [issue tracker](https://github.com/gokhangunduz/alpha/issues).
+Bug reports, color suggestions, and pull requests are welcome.
+
+- [Report a bug](https://github.com/gokhangunduz/alpha/issues/new?template=bug_report.yml)
+- [Suggest a feature or color](https://github.com/gokhangunduz/alpha/issues/new?template=feature_request.yml)
+- [Reach out](https://gokhangunduz.github.io/alpha/contact)
 
 ## License
 
