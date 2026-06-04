@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.5] - 2026-06-04
+
+### Changed
+
+- Active state indicators hue-shifted from orange to red, preserving saturation and lightness. Dark `#f78166` → `#f76666`, light `#fd8c73` → `#fd7373`. Affects `activityBar.activeBorder` (active sidebar icon), `tab.activeBorderTop` (active tab), and `panelTitle.activeBorder` (active panel) — all three share the same indicator color.
+
 ## [1.1.4] - 2026-06-04
 
 ### Changed
@@ -118,7 +124,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
-[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.1.4...HEAD
+[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.1.5...HEAD
+[1.1.5]: https://github.com/gokhangunduz/alpha/compare/v1.1.4...v1.1.5
 [1.1.4]: https://github.com/gokhangunduz/alpha/compare/v1.1.3...v1.1.4
 [1.1.3]: https://github.com/gokhangunduz/alpha/compare/v1.1.2...v1.1.3
 [1.1.2]: https://github.com/gokhangunduz/alpha/compare/v1.1.1...v1.1.2
