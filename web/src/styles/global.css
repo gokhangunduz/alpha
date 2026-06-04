@@ -11,8 +11,8 @@
   --color-text-muted:        110 110 115;
   --color-text-dim:          72 72 74;
   --color-text-strong:       209 209 214;
-  --color-accent-orange:     255 117 48;
-  --color-accent-orange-h:   255 143 80;
+  --color-accent-red:        255 60 60;
+  --color-accent-red-h:      255 90 90;
   --color-accent-purple:     128 51 153;
   --color-accent-green:      48 209 88;
   --color-accent-pink:       255 45 85;
@@ -28,8 +28,8 @@
     --color-text-muted:        134 134 139;
     --color-text-dim:          161 161 166;
     --color-text-strong:       29 29 31;
-    --color-accent-orange:     230 100 30;
-    --color-accent-orange-h:   200 80 10;
+    --color-accent-red:        220 30 30;
+    --color-accent-red-h:      180 20 20;
     --color-accent-purple:     110 40 130;
     --color-accent-green:      52 199 89;
     --color-accent-pink:       255 45 85;
@@ -55,7 +55,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid theme('colors.accent-orange');
+    outline: 2px solid theme('colors.accent-red');
     outline-offset: 3px;
     border-radius: 4px;
   }
