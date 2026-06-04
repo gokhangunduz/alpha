@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-06-04
+
+### Reverted
+
+- Reverted the syntax palette change shipped in v1.1.0. Constants/numbers hue is back at 20° (dark `#ff925c`, light `#d14600`). v1.1.0 changed the syntax palette under a misread intent — the orange the maintainer wanted updated was on the project website, not in the theme. Users on v1.1.0 should upgrade to restore the original palette.
+
 ## [1.1.0] - 2026-06-04
 
 ### Changed
@@ -92,7 +98,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
-[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/gokhangunduz/alpha/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/gokhangunduz/alpha/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/gokhangunduz/alpha/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/gokhangunduz/alpha/compare/v1.0.0...v1.0.1
