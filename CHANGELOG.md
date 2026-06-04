@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-06-04
+
+### Added
+
+- New app icon: a code window mark with a `>_` prompt on a black iOS-style squircle.
+
+### Changed
+
+- `galleryBanner.color` updated from `#0d1117` to `#000000` to match the new icon.
+- First stable release. The two-variant palette and interface are locked at 1.0.
+
 ## [0.1.0] - 2026-06-03
 
 ### Added
@@ -59,5 +70,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
-[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/gokhangunduz/alpha/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/gokhangunduz/alpha/releases/tag/v0.1.0

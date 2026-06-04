@@ -2,7 +2,7 @@
   "name": "alpha",
   "displayName": "Alpha",
   "description": "A VS Code theme with a clean, restrained interface and a perceptually balanced isoluminant syntax palette. Dark and light variants.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "icon": "assets/alpha.png",
   "publisher": "gokhangunduz",
@@ -29,7 +29,7 @@
     "gokhangunduz"
   ],
   "galleryBanner": {
-    "color": "#0d1117",
+    "color": "#000000",
     "theme": "dark"
   },
   "homepage": "https://github.com/gokhangunduz/alpha#readme",
