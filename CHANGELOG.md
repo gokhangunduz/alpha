@@ -1,9 +1,11 @@
 # Changelog
 
-All notable changes to the Alpha theme are documented in this file.
+## [1.1.6] - 2026-06-04
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+### Changed
+
+- Marketplace description, README hero, website hero, and about subtitle rewritten — none lead with "A VS Code theme…" or "Minimal VS Code color theme…" anymore. New copy: "Perceptually balanced syntax palette with a restrained interface. Two variants for VS Code — alpha dark and alpha light."
+- Changelog cleaned up: intro paragraphs ("All notable changes…", "The format is based on Keep a Changelog…") removed, and the 0.0.1 – 0.0.4 entries expanded to match the semantic detail of the newer ones.
 
 ## [1.1.5] - 2026-06-04
 
@@ -96,32 +98,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Theme screenshots in the README.
+- Screenshots of `alpha` rendered in real editor views, embedded in the README so the Marketplace listing previews the palette before install.
 
 ### Changed
 
-- README polish.
+- README structure polished — clearer install steps, tighter palette section, and consistent code-fence formatting.
 
 ## [0.0.3] - 2023-07-21
 
 ### Changed
 
-- Folder layout reorganized.
-- README content updated.
+- Repository folder layout reorganized — theme JSON moved under `themes/`, assets consolidated under `assets/`, metadata at the root.
+- README content rewritten to match the new layout and to describe the theme's intent more directly.
 
 ## [0.0.2] - 2023-07-21
 
 ### Added
 
-- Theme icon.
+- Marketplace icon (`assets/alpha.png`) wired into `package.json`, so the extension shows a recognizable thumbnail in the Extensions sidebar and the Marketplace listing tile.
 
 ## [0.0.1] - 2023-07-21
 
 ### Added
 
-- Initial release.
+- Initial release. Dark variant of `alpha` — a perceptually balanced syntax palette in seven hues, paired with a calm dark interface. Packaged as a VS Code color theme and published to the Marketplace.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
+[1.1.6]: https://github.com/gokhangunduz/alpha/compare/v1.1.5...v1.1.6
 [1.1.5]: https://github.com/gokhangunduz/alpha/compare/v1.1.4...v1.1.5
 [1.1.4]: https://github.com/gokhangunduz/alpha/compare/v1.1.3...v1.1.4
 [1.1.3]: https://github.com/gokhangunduz/alpha/compare/v1.1.2...v1.1.3

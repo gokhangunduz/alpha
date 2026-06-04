@@ -22,6 +22,13 @@ const schema = {
   subtitle="What changed in each release of alpha."
   schema={schema}
 >
+  <h2>1.1.6 — 2026-06-04</h2>
+  <p><strong>Changed</strong></p>
+  <ul>
+    <li>Marketplace description, README hero, website hero, and about subtitle rewritten — none lead with "A VS Code theme…" or "Minimal VS Code color theme…" anymore. New copy: <em>"Perceptually balanced syntax palette with a restrained interface. Two variants for VS Code — alpha dark and alpha light."</em></li>
+    <li>Changelog cleaned up: intro paragraphs ("All notable changes…", "The format is based on Keep a Changelog…") removed, and the 0.0.1 – 0.0.4 entries expanded to match the semantic detail of the newer ones.</li>
+  </ul>
+
   <h2>1.1.5 — 2026-06-04</h2>
   <p><strong>Changed</strong></p>
   <ul>
@@ -111,24 +118,32 @@ const schema = {
 
   <h2>0.0.4 — 2023-07-22</h2>
   <p><strong>Added</strong></p>
-  <ul><li>Theme screenshots in the README.</li></ul>
+  <ul>
+    <li>Screenshots of <code>alpha</code> rendered in real editor views, embedded in the README so the Marketplace listing previews the palette before install.</li>
+  </ul>
   <p><strong>Changed</strong></p>
-  <ul><li>README polish.</li></ul>
+  <ul>
+    <li>README structure polished — clearer install steps, tighter palette section, and consistent code-fence formatting.</li>
+  </ul>
 
   <h2>0.0.3 — 2023-07-21</h2>
   <p><strong>Changed</strong></p>
   <ul>
-    <li>Folder layout reorganized.</li>
-    <li>README content updated.</li>
+    <li>Repository folder layout reorganized — theme JSON moved under <code>themes/</code>, assets consolidated under <code>assets/</code>, metadata at the root.</li>
+    <li>README content rewritten to match the new layout and to describe the theme's intent more directly.</li>
   </ul>
 
   <h2>0.0.2 — 2023-07-21</h2>
   <p><strong>Added</strong></p>
-  <ul><li>Theme icon.</li></ul>
+  <ul>
+    <li>Marketplace icon (<code>assets/alpha.png</code>) wired into <code>package.json</code>, so the extension shows a recognizable thumbnail in the Extensions sidebar and the Marketplace listing tile.</li>
+  </ul>
 
   <h2>0.0.1 — 2023-07-21</h2>
   <p><strong>Added</strong></p>
-  <ul><li>Initial release.</li></ul>
+  <ul>
+    <li>Initial release. Dark variant of <code>alpha</code> — a perceptually balanced syntax palette in seven hues, paired with a calm dark interface. Packaged as a VS Code color theme and published to the Marketplace.</li>
+  </ul>
 
   <p style="margin-top: 2.5rem;">The canonical changelog lives in the repository: <a href="https://github.com/gokhangunduz/alpha/blob/main/CHANGELOG.md" target="_blank" rel="noopener">CHANGELOG.md</a>.</p>
 </ContentLayout>
