@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0] - 2026-06-04
+
+### Changed
+
+- Active state indicators and primary buttons pushed to pure red (HSL hue 0°, saturation 100%). Previous values (`#ef4444` / `#dc2626` / `#b91c1c`) still read as salmon/coral against the surrounding UI. New: dark active indicators and button hover `#ff1a1a`, dark button base `#e60000`; light active indicators and button base `#cc0000`, light button hover `#990000`.
+
 ## [1.1.7] - 2026-06-04
 
 ### Changed
@@ -131,6 +137,7 @@
 - Initial release. Dark variant of `alpha` — a perceptually balanced syntax palette in seven hues, paired with a calm dark interface. Packaged as a VS Code color theme and published to the Marketplace.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
+[1.2.0]: https://github.com/gokhangunduz/alpha/compare/v1.1.7...v1.2.0
 [1.1.7]: https://github.com/gokhangunduz/alpha/compare/v1.1.6...v1.1.7
 [1.1.6]: https://github.com/gokhangunduz/alpha/compare/v1.1.5...v1.1.6
 [1.1.5]: https://github.com/gokhangunduz/alpha/compare/v1.1.4...v1.1.5
