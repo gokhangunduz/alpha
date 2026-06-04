@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.1] - 2026-06-04
+
+### Changed
+
+- Description rewritten to drop "VS Code" from the lede across `package.json`, README hero, website hero, and OG meta. New copy: "Perceptually balanced syntax palette with a restrained interface. Two variants — alpha dark and alpha light."
+- README badges removed — the row felt cluttered against the hero block.
+- Primary button colors reverted from v1.2.0's pure red back to the v1.1.7 values, since the v1.2.0 shift was scoped to active indicators only. Dark `button.background` `#e60000` → `#dc2626`, `button.hoverBackground` `#ff1a1a` → `#ef4444`; light `button.background` `#cc0000` → `#dc2626`, `button.hoverBackground` `#990000` → `#b91c1c`.
+- Active state indicators (tab/sidebar/panel) realigned to match the button base color: `#dc2626` in both variants. Tab and button base now share one accent, so the active surface and the primary action speak in the same red.
+
 ## [1.2.0] - 2026-06-04
 
 ### Changed
@@ -137,6 +146,7 @@
 - Initial release. Dark variant of `alpha` — a perceptually balanced syntax palette in seven hues, paired with a calm dark interface. Packaged as a VS Code color theme and published to the Marketplace.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
+[1.2.1]: https://github.com/gokhangunduz/alpha/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/gokhangunduz/alpha/compare/v1.1.7...v1.2.0
 [1.1.7]: https://github.com/gokhangunduz/alpha/compare/v1.1.6...v1.1.7
 [1.1.6]: https://github.com/gokhangunduz/alpha/compare/v1.1.5...v1.1.6

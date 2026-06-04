@@ -22,6 +22,15 @@ const schema = {
   subtitle="What changed in each release of alpha."
   schema={schema}
 >
+  <h2>1.2.1 — 2026-06-04</h2>
+  <p><strong>Changed</strong></p>
+  <ul>
+    <li>Description rewritten to drop "VS Code" from the lede across <code>package.json</code>, README hero, website hero, and OG meta. New copy: <em>"Perceptually balanced syntax palette with a restrained interface. Two variants — alpha dark and alpha light."</em></li>
+    <li>README badges removed — the row felt cluttered against the hero block.</li>
+    <li>Primary button colors reverted from v1.2.0's pure red back to the v1.1.7 values, since the v1.2.0 shift was scoped to active indicators only. Dark <code>button.background</code> <code>#e60000</code> → <code>#dc2626</code>, <code>button.hoverBackground</code> <code>#ff1a1a</code> → <code>#ef4444</code>; light <code>button.background</code> <code>#cc0000</code> → <code>#dc2626</code>, <code>button.hoverBackground</code> <code>#990000</code> → <code>#b91c1c</code>.</li>
+    <li>Active state indicators (tab/sidebar/panel) realigned to match the button base color: <code>#dc2626</code> in both variants. Tab and button base now share one accent, so the active surface and the primary action speak in the same red.</li>
+  </ul>
+
   <h2>1.2.0 — 2026-06-04</h2>
   <p><strong>Changed</strong></p>
   <ul>
