@@ -5,8 +5,6 @@ All notable changes to the Alpha theme are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
-
 ## [1.1.5] - 2026-06-04
 
 ### Changed
@@ -124,7 +122,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
-[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.1.5...HEAD
 [1.1.5]: https://github.com/gokhangunduz/alpha/compare/v1.1.4...v1.1.5
 [1.1.4]: https://github.com/gokhangunduz/alpha/compare/v1.1.3...v1.1.4
 [1.1.3]: https://github.com/gokhangunduz/alpha/compare/v1.1.2...v1.1.3
