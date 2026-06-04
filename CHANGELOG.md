@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-06-04
+
+### Changed
+
+- Constants/numbers hue shifted from 20° (orange) toward red: 10°. Dark `#ff925c` → `#ff775c`, light `#d14600` → `#d12300`. Lightness preserved per variant; numbers and constants now read as a deeper red while staying distinct from the variables/tags hue at 0°.
+
 ## [1.0.2] - 2026-06-04
 
 ### Changed
@@ -86,7 +92,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
-[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/gokhangunduz/alpha/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/gokhangunduz/alpha/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/gokhangunduz/alpha/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/gokhangunduz/alpha/compare/v0.1.0...v1.0.0
