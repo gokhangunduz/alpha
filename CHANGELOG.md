@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.7] - 2026-06-04
+
+### Changed
+
+- Active state indicators pulled to a more dominant red. Dark `#f76666` → `#ef4444`, light `#fd7373` → `#dc2626`. Affects `tab.activeBorderTop`, `activityBar.activeBorder`, and `panelTitle.activeBorder` — the previous shade still read as salmon/orange against the surrounding UI.
+- Primary button colors moved from oxblood toward a familiar, recognizable button red. Dark `button.background` `#862323` → `#dc2626`, `button.hoverBackground` `#a02e2e` → `#ef4444`. Light `button.background` `#881f1f` → `#dc2626`, `button.hoverBackground` `#7f1a1a` → `#b91c1c` (kept darker on light per the GitHub convention that hover deepens on white).
+
 ## [1.1.6] - 2026-06-04
 
 ### Changed
@@ -124,6 +131,7 @@
 - Initial release. Dark variant of `alpha` — a perceptually balanced syntax palette in seven hues, paired with a calm dark interface. Packaged as a VS Code color theme and published to the Marketplace.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
+[1.1.7]: https://github.com/gokhangunduz/alpha/compare/v1.1.6...v1.1.7
 [1.1.6]: https://github.com/gokhangunduz/alpha/compare/v1.1.5...v1.1.6
 [1.1.5]: https://github.com/gokhangunduz/alpha/compare/v1.1.4...v1.1.5
 [1.1.4]: https://github.com/gokhangunduz/alpha/compare/v1.1.3...v1.1.4

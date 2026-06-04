@@ -2,7 +2,7 @@
   "name": "alpha",
   "displayName": "Alpha",
   "description": "Perceptually balanced syntax palette with a restrained interface. Two variants for VS Code — alpha dark and alpha light.",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "license": "MIT",
   "icon": "assets/alpha.png",
   "publisher": "gokhangunduz",
