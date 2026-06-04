@@ -7,7 +7,7 @@
       "foreground": "#5c8fff"
     },
     "variable.constant": {
-      "foreground": "#ff775c"
+      "foreground": "#ff925c"
     },
     "variable.defaultLibrary": {
       "foreground": "#ffe15c"
@@ -32,7 +32,7 @@
       "name": "haskell storage type",
       "scope": "storage.type.haskell",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -102,7 +102,7 @@
       "name": "regexp operator.quantifier",
       "scope": "keyword.operator.quantifier.regexp",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -193,7 +193,7 @@
       "name": "math property js/ts",
       "scope": "support.constant.property.math",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -280,7 +280,7 @@
       "name": "support.constant.property-value.scss",
       "scope": "support.constant.property-value.scss,support.constant.property-value.css",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -294,7 +294,7 @@
       "name": "css color standard name",
       "scope": "support.constant.color.w3c-standard-color-name.css,support.constant.color.w3c-standard-color-name.scss",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -308,7 +308,7 @@
       "name": "css attribute-name.id",
       "scope": "support.constant.color.w3c-standard-color-name.css",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -343,7 +343,7 @@
       "name": "js/ts json",
       "scope": "support.constant.json",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -370,7 +370,7 @@
       "name": "js/ts support.variable.property.process",
       "scope": "support.variable.property.process",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -461,7 +461,7 @@
       "name": "python parameter",
       "scope": "variable.parameter.function.language.python",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -482,7 +482,7 @@
       "name": "pyCs",
       "scope": "variable.parameter.function.python",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -503,7 +503,7 @@
       "name": "python placeholder reset to normal string",
       "scope": "constant.character.format.placeholder.other.python",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -659,7 +659,7 @@
       "name": "Control Elements",
       "scope": "control.elements, keyword.operator.less",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -722,7 +722,7 @@
       "name": "Support type",
       "scope": "support.constant.font-name",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -757,21 +757,21 @@
       "name": "Integers",
       "scope": "constant.numeric",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
       "name": "Constants",
       "scope": "constant",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
       "name": "Constants",
       "scope": "punctuation.definition.constant",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -785,7 +785,7 @@
       "name": "Attributes",
       "scope": "entity.other.attribute-name",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -801,7 +801,7 @@
       "scope": "entity.other.attribute-name.class.css",
       "settings": {
         "fontStyle": "normal",
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -836,7 +836,7 @@
       "name": "Bold",
       "scope": "markup.bold,todo.bold",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -892,7 +892,7 @@
       "name": "[VSCODE-CUSTOM] Markdown Punctuation Definition Bold",
       "scope": "punctuation.definition.bold.markdown",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -1141,14 +1141,14 @@
       "name": "support php constants",
       "scope": "support.constant.core.rust",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
       "name": "support php constants",
       "scope": "support.constant.ext.php,support.constant.std.php,support.constant.core.php,support.constant.parser-token.php",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -1239,14 +1239,14 @@
       "name": "rgb value",
       "scope": "inline-color-decoration rgb-value",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
       "name": "rgb value less",
       "scope": "less rgb-value",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -1293,7 +1293,7 @@
     {
       "scope": "token.warn-token",
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -1431,7 +1431,7 @@
       "name": "elm constant",
       "scope": ["support.constant.elm"],
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {
@@ -1644,7 +1644,7 @@
       "name": "wikiword",
       "scope": ["wikiword.xi"],
       "settings": {
-        "foreground": "#ff775c"
+        "foreground": "#ff925c"
       }
     },
     {

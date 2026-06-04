@@ -65,7 +65,7 @@ The dark variant locks every syntax color at `HSL(h, 100%, 68%)` — only the hu
 | Hue  | Used for           | Dark        | Light       |
 | ---- | ------------------ | ----------- | ----------- |
 | 0°   | variables, tags    | `#ff5c5c`   | `#ed0000`   |
-| 10°  | constants, numbers | `#ff775c`   | `#d12300`   |
+| 20°  | constants, numbers | `#ff925c`   | `#d14600`   |
 | 49°  | classes, types     | `#ffe15c`   | `#8c7300`   |
 | 143° | strings            | `#5cff9a`   | `#008734`   |
 | 186° | functions          | `#5cefff`   | `#008391`   |
