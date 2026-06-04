@@ -2,7 +2,7 @@
   "name": "alpha",
   "displayName": "Alpha",
   "description": "Perceptually balanced syntax palette with a restrained interface. Two variants — alpha dark and alpha light.",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "license": "MIT",
   "icon": "assets/alpha.png",
   "publisher": "gokhangunduz",

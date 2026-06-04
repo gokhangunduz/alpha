@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.2] - 2026-06-04
+
+### Fixed
+
+- Git diff semantics restored. v1.1.3's "shift all UI greens to red" bled into tokens whose green carries meaning — most importantly, additions in the diff view and added/untracked files in the explorer were showing in red. Restored to original greens:
+  - `gitDecoration.addedResourceForeground`, `gitDecoration.untrackedResourceForeground` (file explorer)
+  - `editorGutter.addedBackground` (gutter mark for added lines)
+  - `diffEditor.insertedLineBackground`, `diffEditor.insertedTextBackground` (diff view)
+  - `terminal.ansiGreen`, `terminal.ansiBrightGreen` (ANSI palette)
+  - `editor.focusedStackFrameHighlightBackground` (debug "currently executing" position)
+  - `editor.selectionHighlightBackground`, `editorBracketMatch.background`, `editorBracketMatch.border` (selection highlights)
+  - `editorBracketHighlight.foreground2`, `symbolIcon.numberForeground`, `debugTokenExpression.boolean`, `debugTokenExpression.number` (palette-position colors restored to keep distinct hues across rainbow brackets and outline icons)
+- Button base + active indicator red introduced in v1.2.1 is untouched — `button.background`, `tab.activeBorderTop`, `activityBar.activeBorder`, `panelTitle.activeBorder` all stay at `#dc2626` in both variants.
+
 ## [1.2.1] - 2026-06-04
 
 ### Changed
@@ -146,6 +160,7 @@
 - Initial release. Dark variant of `alpha` — a perceptually balanced syntax palette in seven hues, paired with a calm dark interface. Packaged as a VS Code color theme and published to the Marketplace.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
+[1.2.2]: https://github.com/gokhangunduz/alpha/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/gokhangunduz/alpha/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/gokhangunduz/alpha/compare/v1.1.7...v1.2.0
 [1.1.7]: https://github.com/gokhangunduz/alpha/compare/v1.1.6...v1.1.7
