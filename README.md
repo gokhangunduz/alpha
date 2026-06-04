@@ -3,7 +3,7 @@
 
   <h1>Alpha</h1>
 
-  <p><strong>Minimal VS Code color theme. Two variants — <code>alpha dark</code> and <code>alpha light</code> — built around a perceptually balanced isoluminant syntax palette.</strong></p>
+  <p><strong>Perceptually balanced syntax palette with a restrained interface. Two variants for VS Code — <code>alpha dark</code> and <code>alpha light</code>.</strong></p>
 
   <p>
     <a href="https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha"><img alt="Marketplace" src="https://img.shields.io/visual-studio-marketplace/v/gokhangunduz.alpha?label=marketplace&style=flat-square&color=862323"></a>
