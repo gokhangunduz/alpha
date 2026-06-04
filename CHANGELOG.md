@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.3] - 2026-06-04
+
+### Changed
+
+- Remaining UI greens hue-shifted to red, preserving saturation and lightness. Dark `#3fb950` → `#b93f3f`, `#56d364` → `#d35656`, and the residual `#2ea043`/`#238636` instances; light `#4ac26b` → `#c24a4a`, `#aceebb` → `#eeacac`, `#6fdd8b` → `#dd6f6f`, and residual `#1a7f37`/`#1f883d`. Covers selection highlight, bracket match, diff inserts, gutter added, terminal ANSI green, git "added/untracked" decorations, debug expression highlights, symbol icons, and bracket pair colorization.
+- Marketplace description rewritten — no longer leads with "A VS Code theme with…". New: "Minimal VS Code color theme with two variants — alpha dark and alpha light — built around a perceptually balanced isoluminant syntax palette."
+
 ## [1.1.2] - 2026-06-04
 
 ### Changed
@@ -104,7 +111,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
-[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.1.2...HEAD
+[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.1.3...HEAD
+[1.1.3]: https://github.com/gokhangunduz/alpha/compare/v1.1.2...v1.1.3
 [1.1.2]: https://github.com/gokhangunduz/alpha/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/gokhangunduz/alpha/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/gokhangunduz/alpha/compare/v1.0.2...v1.1.0
