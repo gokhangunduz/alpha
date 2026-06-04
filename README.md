@@ -3,14 +3,11 @@
 
   <h1>Alpha</h1>
 
-  <p><strong>A VS Code theme with a quiet interface and a perceptually balanced isoluminant syntax palette.</strong><br/>Ships as <code>alpha dark</code> and <code>alpha light</code>.</p>
+  <p><strong>Minimal VS Code color theme. Two variants — <code>alpha dark</code> and <code>alpha light</code> — built around a perceptually balanced isoluminant syntax palette.</strong></p>
 
   <p>
-    <a href="https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha"><img alt="Marketplace version" src="https://img.shields.io/visual-studio-marketplace/v/gokhangunduz.alpha?label=marketplace&color=2f81f7"></a>
-    <a href="https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha"><img alt="Installs" src="https://img.shields.io/visual-studio-marketplace/i/gokhangunduz.alpha"></a>
-    <a href="https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha&ssr=false#review-details"><img alt="Rating" src="https://img.shields.io/visual-studio-marketplace/r/gokhangunduz.alpha"></a>
-    <a href="https://open-vsx.org/extension/gokhangunduz/alpha"><img alt="Open VSX" src="https://img.shields.io/open-vsx/v/gokhangunduz/alpha?label=open-vsx&color=a60f4d"></a>
-    <a href="./LICENSE"><img alt="License" src="https://img.shields.io/github/license/gokhangunduz/alpha"></a>
+    <a href="https://marketplace.visualstudio.com/items?itemName=gokhangunduz.alpha"><img alt="Marketplace" src="https://img.shields.io/visual-studio-marketplace/v/gokhangunduz.alpha?label=marketplace&style=flat-square&color=862323"></a>
+    <a href="./LICENSE"><img alt="License" src="https://img.shields.io/github/license/gokhangunduz/alpha?style=flat-square&color=222"></a>
   </p>
 
   <p>
