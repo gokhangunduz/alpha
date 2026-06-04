@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2026-06-04
+
+### Changed
+
+- README rewritten with a centered hero (icon, title, badges, quick links), a "Why alpha" highlights block, an "In action" gallery, and a "Match your system theme" how-to.
+
 ## [1.0.1] - 2026-06-04
 
 ### Changed
@@ -80,7 +86,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
-[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/gokhangunduz/alpha/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/gokhangunduz/alpha/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/gokhangunduz/alpha/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/gokhangunduz/alpha/releases/tag/v0.1.0
