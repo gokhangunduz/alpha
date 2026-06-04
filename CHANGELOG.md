@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.2] - 2026-06-04
+
+### Changed
+
+- Primary button colors hue-shifted from green to red, preserving saturation and lightness per variant. Dark: `button.background` `#238636` → `#862323`, `button.hoverBackground` `#2ea043` → `#a02e2e`. Light: `button.background` `#1f883d` → `#881f1f`, `button.hoverBackground` `#1a7f37` → `#7f1a1a`. Semantic greens (git "added", diff inserts, terminal ANSI, bracket pair) are untouched.
+
 ## [1.1.1] - 2026-06-04
 
 ### Reverted
@@ -98,7 +104,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
-[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.1.1...HEAD
+[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.1.2...HEAD
+[1.1.2]: https://github.com/gokhangunduz/alpha/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/gokhangunduz/alpha/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/gokhangunduz/alpha/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/gokhangunduz/alpha/compare/v1.0.1...v1.0.2
