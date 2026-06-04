@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-06-04
+
+### Changed
+
+- Screenshots converted to WebP (down from oversized PNG-disguised-as-JPEG), trimming the VSIX by ~60%.
+
+### Fixed
+
+- Duplicate screenshot reference in the README (`screenshot-2` and `screenshot-3` were identical files).
+
 ## [1.0.0] - 2026-06-04
 
 ### Added
@@ -70,6 +80,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release.
 
 <!-- Comparison links. Earlier versions were not tagged, so no compare links are provided for them. -->
-[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/gokhangunduz/alpha/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/gokhangunduz/alpha/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/gokhangunduz/alpha/compare/v0.1.0...v1.0.0
 [0.1.0]: https://github.com/gokhangunduz/alpha/releases/tag/v0.1.0

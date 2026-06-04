@@ -2,7 +2,7 @@
   "name": "alpha",
   "displayName": "Alpha",
   "description": "A VS Code theme with a clean, restrained interface and a perceptually balanced isoluminant syntax palette. Dark and light variants.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "icon": "assets/alpha.png",
   "publisher": "gokhangunduz",
