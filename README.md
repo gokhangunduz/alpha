@@ -17,7 +17,7 @@ The syntax palette uses the same seven hues in both variants, but the lightness 
 - **Dark variant:** all seven hues at HSL(`h`, 100%, 68%) — strict isoluminance.
 - **Light variant:** each hue tuned to ≥4.5:1 contrast on white (WCAG-AA), saturation kept at 100%. Equal *perceived* weight across colors.
 
-![Alpha](./assets/screenshot-1.jpeg)
+![Alpha](./assets/screenshot-1.webp)
 
 ## Install
 
@@ -50,9 +50,7 @@ Or grab it directly from the [Marketplace](https://marketplace.visualstudio.com/
 
 ## Screenshots
 
-![Alpha](./assets/screenshot-2.jpeg)
-
-![Alpha](./assets/screenshot-3.jpeg)
+![Alpha](./assets/screenshot-2.webp)
 
 ## Contributing
 
